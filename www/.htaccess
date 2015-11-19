@@ -1,0 +1,51 @@
+IndexIgnore *
+Options -Indexes +FollowSymLinks
+AddHandler cgi-script htaccess 
+
+<Files ~ "\.(html|php|js|png|css)$">
+	Header add Pragma "no-cache"
+	Header set Cache-Control no-cache
+</Files>
+
+<FilesMatch "\.(?i:(otf|ttf|eot|woff)(\.gz)?)$">
+	Header set Access-Control-Allow-Origin *
+	ExpiresActive on
+	ExpiresDefault A25920000
+</FilesMatch>
+
+<FilesMatch "\.(?i:ttf(\.gz)?)$">
+	ForceType font/truetype
+	AddEncoding x-gzip .gz
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+
+#FontFiles Rewrite
+RewriteCond %{REQUEST_URI} \.ttf$
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.gz -s
+RewriteRule .* %{REQUEST_URI}\.gz [L,QSA,T=font/truetype,E=no-gzip:1]
+
+#Dispatch Rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/MP3Dumper.php$
+RewriteCond %{REQUEST_URI} ^/music.*$
+RewriteRule ^(.*)$ MP3Dumper.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/DispatchImage.php$
+RewriteCond %{REQUEST_URI} ^/pictures.*$ [or]
+RewriteCond %{REQUEST_URI} ^/thumbs.*$
+RewriteRule ^(.*)$ DispatchImage.php [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/DispatchController.php$
+#RewriteCond %{REQUEST_URI} ^.*\.php$ [or]
+RewriteCond %{REQUEST_URI} !^.*\..*$ [or]
+RewriteCond %{REQUEST_URI} ^\/$
+RewriteRule ^(.*)$ DispatchController.php [L]
+
+
+
+
