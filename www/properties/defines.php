@@ -40,6 +40,7 @@ define("HOST_BETA", "bitchunk.fam.cx");
 define("HOST_PRODUCTION", "hitokuchihu.kemono.jp");
 
 $svh = $_SERVER['HTTP_HOST'];
+define("HOST_NAME", $svh);
 define("PROTOCOL", 'http' . (@$_SERVER['HTTPS'] == 'on' ? 's' : '') . "://");
 
 if(strstr($svh, HOST_PRODUCTION) != false){
@@ -51,6 +52,9 @@ if(strstr($svh, HOST_PRODUCTION) != false){
 	define('PROTOCOL_HOST', PROTOCOL. HOST_LOCAL. '/');
 	ini_set('display_errors', 1);
 }
+
+define('IMAGES_PATH', PROTOCOL_HOST. '/img');
+
 
 define("SITE_NAME", "bitchunk");
 define("SITE_AUTHER", "bitchunk");

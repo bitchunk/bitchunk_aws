@@ -26,7 +26,6 @@
 <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 <link rel="stylesheet" href="/css/common.css" />
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="/js/lib/jquery-2.0.0.min.js"></script>
 <script src="/js/lib/jquery.easing.1.3.js"></script>
 <script src="/js/common.js"></script>
