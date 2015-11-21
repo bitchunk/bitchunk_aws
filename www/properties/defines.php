@@ -55,7 +55,12 @@ if(strstr($svh, HOST_PRODUCTION) != false){
 
 define('IMAGES_PATH', PROTOCOL_HOST. '/img');
 
-
+/**
+ * common meta tags
+ */
 define("SITE_NAME", "bitchunk");
 define("SITE_AUTHER", "bitchunk");
+define("SITE_KEYWORDS", "pixel contents,letro sounds,web applicatioins");
+define("SITE_DESCRIPTION", "Web Contents Creative Site");
+
 

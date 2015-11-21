@@ -10,9 +10,9 @@ class DispatchController {
 	static $donateButton = '';
 	static $headerBase = 'common';
 	static $breadcrumb = array(array('name' => 'とっぷ', 'link' => '/'));
-	static $pagetitle = 'ひとくちふ';
-	static $pagedescription = 'ひとくちサイズのケモノコンテンツサイト';
-	static $pagekeywords = 'ケモノ,kemono,ケモノドット絵,kemono pixel arts,ケモノイラスト,kemono illustration';
+	static $pagetitle = SITE_NAME;
+	static $pagedescription = SITE_DESCRIPTION;
+	static $pagekeywords = SITE_KEYWORDS;
 	
 	
 	static function dispatch() {
