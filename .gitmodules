@@ -1,0 +1,3 @@
+[submodule "www/js/chunklekit"]
+	path = www/js/chunklekit
+	url = git@github.com:oshiimizunohuta/chunklekit.git
