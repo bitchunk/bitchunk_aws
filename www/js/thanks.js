@@ -246,7 +246,7 @@ THANKS.prototype = {
 	{
 		// this.loader.init();
 		var self = this, resorce = loadImages([
-			 [this.uiImageName, 168, 32],
+			 [this.uiImageName, 160, 32],
 			 // [this.testImageName, 160, 120],
 			 // [this.uiImageName, 16, 16],
 			 // [this.snsImageName, 16, 16],
@@ -338,7 +338,7 @@ THANKS.prototype = {
 				for(i = 0; i < rect.h; i++){
 					x = Math.sin((i + diff) * 0.14) * 3;
 					// x = Math.sin(i + (cnt * DEBUG_RASTER_SIN)) * 240 * DEBUG_RASTER_DIFF;
-					bg.setRasterHorizon(rect.y + i, x, y + i);
+					bg.setRasterHorizon(rect.y + i, x | 0, y + i);
 				}
 			// }else{
 					// bg.setRasterHorizon(rect.y, 0, y);
@@ -372,10 +372,11 @@ THANKS.prototype = {
 			, keys = Object.keys(f)
 			, len = keys.length
 			// , d = Math.sin(diff) * 0.5
-			, x
+			, y
 			;
 			for(i = 0; i < len; i++){
-				bg.drawSpriteChunk(f[keys[i]], rect.x + cto(i), rect.y - (Math.sin((cnt - (i * (Math.PI * 6))) * 0.2) * 2));
+				y = rect.y - (Math.sin((cnt - (i * (Math.PI * 6))) * 0.2) * 2);
+				bg.drawSpriteChunk(f[keys[i]], rect.x + cto(i), y | 0);
 			}
 			
 		});
