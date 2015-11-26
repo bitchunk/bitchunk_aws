@@ -30,14 +30,14 @@ define("BANNER_URI", WEBHOME. 'img/banner');
 
 define("DEFAULT_ENCODE", "utf-8");
 
-define("SESSION_NAME_COMMON", 'HITOKUCHIHU');
+define("SESSION_NAME_COMMON", 'BITCHUNK');
 
 define("PICTURE_IGNORE_FILES_PATH", PICT_PATH. "ignores.csv");
 
 
 define("HOST_LOCAL", "localhost:58106");
 define("HOST_BETA", "bitchunk.fam.cx");
-define("HOST_PRODUCTION", "hitokuchihu.kemono.jp");
+define("HOST_PRODUCTION", "bitchunk.net");
 
 $svh = $_SERVER['HTTP_HOST'];
 define("HOST_NAME", $svh);
