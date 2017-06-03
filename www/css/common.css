@@ -45,16 +45,23 @@ img{
 	padding:0;
 }
 
-h1, h2{
+h1, h2, h3{
 	padding:0;
 	margin:0;
 	font-size: 1.5rem;
 	line-height:1.6rem;
+	text-align: left;
+}
+h3{
+	font-size: 1.3rem;
 }
 
 @media screen and (max-width:640px){
 	h1, h2{
-		font-size: 1.2rem;
+		font-size: 1.14rem;
+	}
+	h3{
+		font-size: 1.02rem;
 	}
 }
 
@@ -231,7 +238,7 @@ nav .head-layer{
 	float:left;
 	line-height: 32px;
 }
-.head-layer h1 #banner{
+.head-layer h1 #banner, .head-layer h2 #banner{
 	height: 16px;
 	width: auto;
 	vertical-align: middle;
@@ -244,6 +251,7 @@ nav .head-layer{
 	height:32px;
 	margin:0;
 	float:left;
+	/*font-size:1rem;*/
 }
 
 @media screen and (max-width:640px){
@@ -252,6 +260,63 @@ nav .head-layer{
 	}
 }
 
+/*head buttons*/
+nav .menu button{
+	width: 64px;
+	height: 32px;
+	background-image: url('/img/common/header_buttons.png');
+	image-rendering: pixelated; /*chrome*/
+	background-size: 200%;
+	background-color:transparent;
+	border: none;
+	cursor: pointer;
+	margin-right: 2rem;
+	vertical-align: top;
+	font-size: 0;
+	background-color: black;
+	
+}
+
+nav .menu button:hover{
+	background-image: url('/img/common/header_buttons_hover.png');
+}
+button.home{
+	background-position-x: 0px;
+	background-position-y: 0px;
+}
+button.blog{
+	background-position-x: -64px;
+	background-position-y: 0px;
+}
+button.apps{
+	background-position-x: 0px;
+	background-position-y: -32px;
+}
+button.about{
+	background-position-x: -64px;
+	background-position-y: -32px;
+}
+
+nav .menu a{
+	text-decoration: none;
+}
+nav .menu a span{
+	vertical-align: bottom;
+	line-height: 1.0rem;
+}
+nav .menu p{
+	padding: 1rem;
+}
+@media screen and (max-width:640px){
+	nav .menu a span{
+		display: block;
+		margin: 0.4rem 1rem;
+	}
+	nav .menu p{
+		padding: 1rem 0.2rem;
+		font-size: 1rem;
+	}
+}
 
 ul.breadcrumb{
 	background-image: url('/img/common/bg_check_shadow.png');
@@ -264,6 +329,7 @@ ul.breadcrumb{
 	padding:0 0.5rem;
 	margin:0;
 }
+
 ul.breadcrumb li{
 	float:left;
 }
@@ -284,6 +350,14 @@ ul.breadcrumb span{
 	line-height:0.8rem;
 	vertical-align:bottom;
 }
+@media screen and (max-width:640px){
+	ul.breadcrumb span{
+		font-size: 0.6rem;
+	}
+	ul.breadcrumb li:after{
+		font-size: 0.6rem;
+	}
+}
 
 #container{
 	/*margin: 8px auto;*/
@@ -296,17 +370,72 @@ ul.breadcrumb span{
 	background-image: url('/img/common/bg_check.png');
 	background-size: 64px 64px;
 	background-repeat: repeat;
-	
+	background-attachment: fixed;
 }
 
 .contents{
 /*2 + 2.8rem */
-	padding: 0.5rem 4.8rem;
+	padding: 0.5rem 4.8rem 5rem;
 	margin: 0 auto;
 	text-align: center;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
+}
+contents{
+/*	position:relative;*/
+	font-family: "メイリオ","Hiragino Kaku Gothic ProN", sans-serif !important;
+
+}
+
+.contents section{
+	padding: 0;
+}
+
+.contents section nav, .contents section article{
+	transition-duration: 1.4s;
+	top: 0;
+	background-color:#FCE0A8;
+	color: #881400;
+	padding: 0.8rem;
+	margin:0;
+	width: auto;
+	max-width:inherit;
+	min-width: inherit;
+	/*background-color:#B8F8B8;*/
+}
+
+.contents section:before, .contents section:after{
+	content: '';
+	display:block;
+	height: 16px;
+	width: auto;
+	background-image:url('/img/common/bg_check_shadow.png');
+	background-size: 64px 64px;
+	background-repeat: repeat;
+	background-attachment: fixed; 
+	background-position: 0 32px; 
+}
+
+.date{
+	margin:1rem;
+}
+@media screen and (max-width:640px){
+	.contents{
+		padding: 0.5rem 1.8rem 5rem;
+	}
+	.contents p{
+		font-size: 0.8rem;
+	}
+	.news p{
+		line-height: 1rem;
+		margin: 0 0 1rem;
+	}
+	.date{
+		margin:0.2rem;
+		display:block;
+	}
+
 }
 
 /**
@@ -387,224 +516,45 @@ footer span.copyright{
  * 	End of Templates Style
  */
 
+.
+
 #display {
-	width:504px;
-	height:96px;
+/*	width:504px;
+	height:96px;*/
 }
 
 #display{
-	position: absolute;
 	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
 
 #display img{
-	width:504px;
-	height:96px;
+	width: 20rem;
+	height: auto;
+/*	width:504px;
+	height:96px;*/
 }
 @media screen and (max-width:640px){
 	#display {
-		width:168px;
-		height:32px;
+/*		width:168px;
+		height:32px;*/
 	}
 	#display img{
-		width:168px;
-		height:32px;
+/*		width:168px;
+		height:32px;*/
+		width: 16rem;
+		height: auto;
 	}
 }
 
-/**
- * 	About page
- */
-article.about section p:first-line,article.about section p:last-line{
-	line-height:0;
-	white-space: normal;
+
+.fade{
+	transition-duration: 1.4s;
+	top: 0;
 }
 
-.sns_buttons{
-	text-align: right;
-	white-space: normal;
-}
-article.about section .sns_buttons>div{
-	/*display:inline-block;*/
+#display.fadeout{
+	transition-duration: 1.4s;
+	top: -128px;
+	bottom:700px;
 }
 
-/**
- * 	Oekaki page
- */
-
-article.oekaki ul{
-	margin: 0 1rem;
-	line-height:0;
-	width: 94%;
-	transition-duration: 0.2s;
-	height: auto;
-	font-size: 0;
-	text-align:left;
-	/*background-color:gray; */
-}
-article.oekaki ul:hover{
-	transition-duration: 0.2s;
-	padding: 0.5rem 0;
-	
-}
-
-article.oekaki li{
-	display: inline-block;
-	background-color:black; 
-}
-/*article.oekaki li:hover{
-	
-}*/
-article.oekaki ul img{
-	transition-duration: 0.2s;
-	height:60px;
-	z-index:0;
-	position:static;
-	top:0px;
-}
-article.oekaki ul img:hover{
-	transition-duration: 0.2s;
-	height:80px;
-	margin:-10px;
-	z-index:100;
-	position:relative;
-	top:-10px;
-}
-
-article.oekaki time:before{
-	content: '●';
-	padding: 0 0.2rem;
-	display: inline-block;
-	text-indent: -0.5rem;
-
-}
-article.oekaki time{
-	margin: 1rem 0 -1px 0;
-	float:left;
-	background-color: #AE8D19;
-	color: white;
-	padding: 0.2rem 1.4rem 0.2rem 1rem;
-	border-radius: 0 1rem;
-	font-size: 0.8rem;
-	line-height: 0.8;
-	vertical-align: middle;
-}
-
-/**
- * Appli page
- */
-article.appli p{
-	margin:1rem 0;
-	padding:0;
-}
-article.appli dl{
-	transition-duration: 0.8s;
-	max-height:10000px;
-	overflow: hidden;
-}
-
-article.appli section dt{
-	font-size: 1.3rem;
-	margin: 1rem 0 0.5rem 0;
-	font-weight: bold;
-}
-@media screen and (max-width:640px){
-	article.appli section dt{
-		font-size: 1.1rem;
-	}
-}
-
-article.appli section dd{
-	white-space: pre-wrap;
-	text-align:left;
-}
-article.appli section dd:first-line
-{
-	line-height:0;
-	white-space: normal;
-}
-
-article.appli section dd{
-	width: 90%;
-	margin: 0 auto;
-	text-align:center;
-}
-
-article.appli section dd.description{
-	width: 90%;
-	text-align:left;
-}
-
-article.appli section iframe{
-	margin:0 auto;
-	width: 90%;
-	/*height: auto;*/
-}
-
-
-/**
- * Links page
- */
-article.link section dt{
-	text-align:left;
-}
-article.link section dd{
-	margin-bottom: 1rem;
-}
-article.link section dd p{
-	white-space: normal;
-	overflow:hidden;
-	line-height:auto;
-	font-size:0.8rem;
-	line-height: 1rem;
-}
-article.link section dd img{
-	float:left;
-	margin-right: 1rem;
-}
-article.link section dd br{
-	display:none;
-	clear:both;
-}
-
-article.link .pickup{
-}
-article.link .pickup .pickbody{
-	overflow:scroll;
-	-webkit-overflow-scrolling: touch;
-	transition-duration:0.6s;
-	transition-timing-function: ease-in;
-	/*height:400px;*/
-	display:block;
-	max-height:400px;
-}
-.close, 
-article.link .pickup .close{
-	/*display:none;*/
-	max-height:0 !important;
-}
-
-article.link .pickup p{
-	font-weight:bold;
-	text-align:right;
-}
-
-@media screen and (max-width:640px){
-	article.link .pickup .pickbody{
-		display:block;
-		max-height:200px;
-		transition-duration:0.6s;
-		transition-timing-function: ease-in;
-	}
-	article.link section dd br{
-		display:block;
-	}
-	article.link section dd img{
-		margin-bottom:0.5rem;
-	}
-
-}

@@ -44,14 +44,15 @@ define("HOST_NAME", $svh);
 define("PROTOCOL", 'http' . (@$_SERVER['HTTPS'] == 'on' ? 's' : '') . "://");
 
 if(strstr($svh, HOST_PRODUCTION) != false){
-	define('PROTOCOL_HOST', PROTOCOL. HOST_PRODUCTION. '/');
+	define('BLOG_HOST', PROTOCOL. 'blog.' .HOST_NAME. '/');
 }else if($svh == HOST_BETA){
-	define('PROTOCOL_HOST', PROTOCOL. HOST_BETA. '/');
-	// ini_set('display_errors', 1);
-}else if($svh == HOST_LOCAL){
-	define('PROTOCOL_HOST', PROTOCOL. HOST_LOCAL. '/');
 	ini_set('display_errors', 1);
+}else if($svh == HOST_LOCAL){
+	ini_set('display_errors', 1);
+	define('BLOG_HOST', PROTOCOL. 'localhost:58107'. '/');
 }
+
+define('PROTOCOL_HOST', PROTOCOL. HOST_NAME. '/');
 
 define('IMAGES_PATH', PROTOCOL_HOST. '/img');
 

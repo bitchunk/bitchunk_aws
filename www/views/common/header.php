@@ -71,6 +71,15 @@ foreach(DispatchController::$additionalHeaders as $index=>$tags){
 	echo $tags. "\n";
 }
 ?>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5168032248020758",
+    enable_page_level_ads: true
+  });
+</script>
+
 </head>
 <body>
 <div id="container">
@@ -78,9 +87,12 @@ foreach(DispatchController::$additionalHeaders as $index=>$tags){
 	<header>
 		<nav>
 			<div class="head-layer">
-				<h1><span class="hide">メニュー</span><a href="<?php echo PROTOCOL_HOST; ?>"><img id="banner" src="/img/common/logo_header.png"></a></h1>
+				<h2><span class="hide">メニュー</span><a href="<?php echo PROTOCOL_HOST; ?>"><img id="banner" src="/img/common/logo_header.png"></a></h2>
 				<div class="menu">
-					<img src="/img/common/icons_sample.png" height="32px" width="auto">
+					<a href="<?php echo PROTOCOL_HOST; ?>"><button class="home">ホーム</button></a>
+					<a href="<?php echo BLOG_HOST; ?>"><button class="blog">ブログ</button></a>
+					<!--<a href="/apps"><button class="apps">アプリ</button></a>-->
+					<a href="/about"><button class="about">サイト概要</button></a>
 				</div>
 				<hr class="clear" />
 			</div>
