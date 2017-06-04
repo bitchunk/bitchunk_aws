@@ -9,7 +9,7 @@ class DispatchController {
 	static $additionalHeaders = array();
 	static $donateButton = '';
 	static $headerBase = 'common';
-	static $breadcrumb = array(array('name' => 'とっぷ', 'link' => '/'));
+	static $breadcrumb = array(array('name' => 'TOP', 'link' => '/'));
 	static $pagetitle = SITE_NAME;
 	static $pagedescription = SITE_DESCRIPTION;
 	static $pagekeywords = SITE_KEYWORDS;

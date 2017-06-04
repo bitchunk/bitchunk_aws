@@ -21,7 +21,7 @@ body{
 	background-color:#000001;
 	line-height:1.3rem;
 	border-style: none; border-width: 1px;
-	text-shadow:0px 0px 1px #ddeeff;
+/*	text-shadow:0px 0px 1px #ddeeff;*/
 	color:#FCFCFC;
 	margin:0;
 	padding:0;
@@ -57,6 +57,9 @@ h3{
 }
 
 @media screen and (max-width:640px){
+	html, body{
+		font-size:14px;
+	}
 	h1, h2{
 		font-size: 1.14rem;
 	}
@@ -66,14 +69,14 @@ h3{
 }
 
 a{
-	color: hsl(80, 30%, 60%);
+	color: #0078F8;
 	font-weight: bold;
-	text-decoration:underline;
+/*	text-decoration:underline;*/
 	background-repeat:no-repeat;
 }
 a:hover{
-	color: hsl(80, 30%, 80%);
-	text-decoration:none;
+	color: #3CBCFC;
+/*	text-decoration:none;*/
 }
 
 
@@ -310,7 +313,7 @@ nav .menu p{
 @media screen and (max-width:640px){
 	nav .menu a span{
 		display: block;
-		margin: 0.4rem 1rem;
+		margin: 0.4rem 0;
 	}
 	nav .menu p{
 		padding: 1rem 0.2rem;
@@ -341,7 +344,7 @@ ul.breadcrumb li:after{
 	line-height:0.8rem;
 	vertical-align:bottom;
 }
-ul.breadcrumb li:nth-last-child(1):after{
+ul.breadcrumb li:nth-last-child(2):after{
 	content:none;
 
 }
@@ -352,10 +355,10 @@ ul.breadcrumb span{
 }
 @media screen and (max-width:640px){
 	ul.breadcrumb span{
-		font-size: 0.6rem;
+/*		font-size: 0.6rem;*/
 	}
 	ul.breadcrumb li:after{
-		font-size: 0.6rem;
+/*		font-size: 0.6rem;*/
 	}
 }
 
@@ -416,6 +419,15 @@ contents{
 	background-attachment: fixed; 
 	background-position: 0 32px; 
 }
+.contents section article{
+	border-image:url('/img/common/section_chunk.png') 8 round;
+	border-style: solid;
+	border-width:16px;
+	/*border-image-width: 16px;*/
+}
+.contents section nav{
+	padding: 0;
+}
 
 .date{
 	margin:1rem;
@@ -425,7 +437,7 @@ contents{
 		padding: 0.5rem 1.8rem 5rem;
 	}
 	.contents p{
-		font-size: 0.8rem;
+/*		font-size: 0.8rem;*/
 	}
 	.news p{
 		line-height: 1rem;
