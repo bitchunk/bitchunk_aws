@@ -63,9 +63,11 @@ class DispatchController {
 	}
 
 	static function pageView($viewPageName){
-		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')) {
+		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')
+				|| !file_exists(VIEW_PATH . '/'. $viewPageName . '.php')) {
 			$viewPageName = 'notfound';
 		}
+		
 		require_once (CONTROLLER_PATH . $viewPageName . '.php');
 		require_once (VIEW_PATH . '/common/header.php');
 		require_once (VIEW_PATH . '/'. $viewPageName . '.php');

@@ -98,11 +98,16 @@ section h1:after{
 }
 
 section p{
-	margin:0;
+	margin: 0.4rem 0;
 	padding:0;
 	white-space:pre-wrap;
 	line-height: 1.8rem;
 	text-align:left;
+}
+section img{
+	margin:0.4rem;
+	height: 240px;
+	image-rendering: auto; /*chrome*/
 }
 
 section{
@@ -132,6 +137,10 @@ hr{
 	}
 }
 @media screen and (max-width:640px){
+	section img{
+		width: 90%;
+		height: auto;
+	}
 	.resp_nl{
 		display:block;
 	}
@@ -184,7 +193,6 @@ span{
 }
 .text_center{
 	text-align:center;
-	display:block;
 }
 .text_left{
 	text-align:left;
@@ -227,16 +235,13 @@ nav .head-layer:before, nav .head-layer:after{
 nav .head-layer{
 	height: 64px;
 	background-repeat: repeat-x;
-	min-width:1024px;
-	overflow: hidden;
-	/*display: inline;*/
 	background-color: #000001;
 }
 
 .head-layer h1,.head-layer h2{
-	width:20%;
-	min-width: 160px;
-	/*height:48px;*/
+	width:15%;
+	min-width: 96px;
+	height:32px;
 	margin:0;
 	float:left;
 	line-height: 32px;
@@ -298,6 +303,10 @@ button.apps{
 button.about{
 	background-position-x: -64px;
 	background-position-y: -32px;
+}
+button.lab{
+	background-position-x: 0px;
+	background-position-y: -64px;
 }
 
 nav .menu a{

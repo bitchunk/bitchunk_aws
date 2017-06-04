@@ -90,8 +90,9 @@ foreach(DispatchController::$additionalHeaders as $index=>$tags){
 				<h2><span class="hide">メニュー</span><a href="<?php echo PROTOCOL_HOST; ?>"><img id="banner" src="/img/common/logo_header.png"></a></h2>
 				<div class="menu">
 					<a href="<?php echo PROTOCOL_HOST; ?>"><button class="home">ホーム</button></a>
+					<a href="/applist"><button class="apps">アプリ</button></a>
+					<a href="/lab"><button class="lab">実験室</button></a>
 					<a href="<?php echo BLOG_HOST; ?>"><button class="blog">ブログ</button></a>
-					<!--<a href="/apps"><button class="apps">アプリ</button></a>-->
 					<a href="/about"><button class="about">サイト概要</button></a>
 				</div>
 				<hr class="clear" />
