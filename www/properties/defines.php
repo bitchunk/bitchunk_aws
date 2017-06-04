@@ -61,7 +61,7 @@ define('IMAGES_PATH', PROTOCOL_HOST. '/img');
  */
 define("SITE_NAME", "bitchunk");
 define("SITE_AUTHER", "bitchunk");
-define("SITE_KEYWORDS", "pixel contents,letro sounds,web applicatioins");
+define("SITE_KEYWORDS", "pixel contents,retro sounds,web applicatioins");
 define("SITE_DESCRIPTION", "Web Contents Creative Site");
 
 
