@@ -6,7 +6,7 @@
 	</section>
 	<section>
 		<article>
-			<h3>LitroKeyboard</h3>
+			<h3><a href="https://ltkb.bitchunk.net" >LitroKeyboard</a></h3>
 			<p>「レトロサウンド」（チップチューン）のシーケンサアプリです。</p>
 			<p>モダンなWEBブラウザで動作します。</p>
 			<p class="text_center"><img src="/img/applist/ltkb_01.png" /><img src="/img/applist/ltkb_02.png" /></p>
@@ -14,7 +14,7 @@
 	</section>
 	<section>
 		<article>
-			<h3>SpriteQueryBuilder</h3>
+			<h3><a href="http://jsdo.it/bitchunk/4lrx" targer="_blank" >SpriteQueryBuilder</a></h3>
 			<p>画像から、キャラチップとして切り貼りした状態をテキストデータとして書き出します。</p>
 			<p>読み込みもします。</p>
 			<p>データはJavascriptのCanvas用ライブラリ「<a href="https://github.com/oshiimizunohuta/chunklekit" target="_blank">chunklekit</a>」で使用できます。</p>
@@ -23,7 +23,7 @@
 	</section>
 	<section>
 		<article>
-			<h3>TOTHKUA</h3>
+			<h3><a href="http://bit.ly/2rxLh2s" >TOTHKUA</a></h3>
 			<p>鼬のような姿をした主人公が地上へおにぎりを食べに行くストーリーのアクションゲームです。</p>
 			<p>Windowsで動作します。</p>
 			<p class="text_center"><img src="/img/applist/tothkua_01.jpg" /><img src="/img/applist/tothkua_02.jpg" /></p>
