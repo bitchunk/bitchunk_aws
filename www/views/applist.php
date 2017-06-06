@@ -5,7 +5,7 @@
 	</section>
 	<section>
 		<article>
-			<h3><a href="https://ltkb.bitchunk.net" >LitroKeyboard</a></h3>
+			<h3><a href="https://ltsnd.bitchunk.net" >LitroKeyboard</a></h3>
 			<p>「レトロサウンド」（チップチューン）のシーケンサアプリです。</p>
 			<p>モダンなWEBブラウザで動作します。</p>
 			<p class="text_center"><img src="/img/applist/ltkb_01.png" /><img src="/img/applist/ltkb_02.png" /></p>
