@@ -156,6 +156,14 @@ class DispatchController {
 		
 		return $ignore;
 	}
+	
+	static function is_mobile(){
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		if((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false)) {
+			return true;
+		}
+		return false;
+	}
 
-};
+}
 DispatchController::dispatch();

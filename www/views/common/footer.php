@@ -1,3 +1,4 @@
+<?php if(!self::is_mobile()): ?>
 		<section>
 			<article>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -11,6 +12,7 @@
 </script>
 			</article>
 		</section>
+<?php endif; ?>
 	<hr class="clear">
 	</div>
 	
