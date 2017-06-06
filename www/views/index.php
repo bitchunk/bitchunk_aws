@@ -1,4 +1,3 @@
-<div class="contents">
 	<div id="display" class="fade">
 		<img src="/img/common/logo_top.png"/>
 	</div>
@@ -24,5 +23,3 @@
 			</nav>
 		</article>
 	</section>
-<hr class="clear">
-</div>

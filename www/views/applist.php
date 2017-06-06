@@ -1,4 +1,3 @@
-<div class="contents">
 	<section>
 		<article>
 			<h2>アプリ一覧</h2>
@@ -29,5 +28,3 @@
 			<p class="text_center"><img src="/img/applist/tothkua_01.jpg" /><img src="/img/applist/tothkua_02.jpg" /></p>
 		</article>
 	</section>
-<hr class="clear">
-</div>

@@ -1,4 +1,3 @@
-<div class="contents">
 	<section>
 		<article>
 			<h2>実験的なもの</h2>
@@ -11,5 +10,3 @@
 			<p class="text_center"><img src="/img/lablist/thumbtri_01.jpg" /></p>
 		</article>
 	</section>
-<hr class="clear">
-</div>

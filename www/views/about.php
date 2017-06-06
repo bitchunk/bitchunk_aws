@@ -1,4 +1,3 @@
-<div class="contents">
 	<section>
 		<article>
 			<h2>サイト概要</h2>
@@ -10,5 +9,3 @@
 			<p>Webアプリを制作しています。</p>
 		</article>
 	</section>
-<hr class="clear">
-</div>

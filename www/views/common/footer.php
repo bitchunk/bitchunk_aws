@@ -1,5 +1,5 @@
-	<section>
-		<article>
+		<section>
+			<article>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- コーポ・フッター -->
 <ins class="adsbygoogle"
@@ -9,8 +9,11 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-		</article>
-	</section>
+			</article>
+		</section>
+	<hr class="clear">
+	</div>
+	
 	<hr class="clear" />
 	<footer>
 		<div class="foot-layer">

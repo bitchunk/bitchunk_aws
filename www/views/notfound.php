@@ -1,4 +1,3 @@
-<div class="contents">
 	<section>
 		<article>
 			<p>ページが見つかりません</p>
@@ -6,5 +5,3 @@
 			
 		</article>
 	</section>
-</div>
-<hr class="clear">
