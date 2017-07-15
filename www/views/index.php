@@ -4,9 +4,10 @@
 	<section class="news">
 		<article>
 			<h2>おしらせ</h2>
-			<p><span class="date">2017-06-05</span>アプリ一覧・実験室を追加</p>
-			<p><span class="date">2017-06-04</span>サイトメニュー追加</p>
-			<p><span class="date">2016-01-06</span>サイトオープン</p>
+			<?php $log = self::siteUpdatesLog(); ?>
+			<?php foreach($log as $row): ?>
+			<p><span class="date"><?php echo $row['date']; ?></span><?php echo $row['text']; ?></p>
+			<?php endforeach; ?>
 		</article>
 	</section>
 	<section>
