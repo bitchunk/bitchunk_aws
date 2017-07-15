@@ -8,16 +8,16 @@
 <meta name="viewport" content="width=320, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
 <?php
-	require_once(VIEW_PATH . '/headerbase/'. DispatchController::$headerBase. '.php');
+	require_once(VIEW_PATH . '/headerbase/'. DispatchAPI::$headerBase. '.php');
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="<?php echo SITE_AUTHER; ?>">
 
 <?php
- if(!empty(DispatchController::$cardsmeta)){
-	require_once(VIEW_PATH . '/cardsmeta/'. DispatchController::$cardsmeta. '.php');
+ if(!empty(DispatchAPI::$cardsmeta)){
+	require_once(VIEW_PATH . '/cardsmeta/'. DispatchAPI::$cardsmeta. '.php');
 }else{
-	require_once(VIEW_PATH . '/cardsmeta/'. DispatchController::$DEFAULT_CARDSMETA. '.php');
+	require_once(VIEW_PATH . '/cardsmeta/'. DispatchAPI::$DEFAULT_CARDSMETA. '.php');
 }
 ?>
 
@@ -60,14 +60,14 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 <?php
-foreach(DispatchController::$additionalScripts as $index=>$filename){
+foreach(DispatchAPI::$additionalScripts as $index=>$filename){
 	if(!isURL($filename)){
 		echo '<script src="/js/'. $filename. '"></script>'. "\n";
 	}else{
 		echo '<script src="'. $filename. '"></script>'. "\n";
 	}
 }
-foreach(DispatchController::$additionalHeaders as $index=>$tags){
+foreach(DispatchAPI::$additionalHeaders as $index=>$tags){
 	echo $tags. "\n";
 }
 ?>
@@ -98,7 +98,7 @@ foreach(DispatchController::$additionalHeaders as $index=>$tags){
 				<hr class="clear" />
 			</div>
 			<hr class="clear" />
-			<?php echo DispatchController::outputBreadCrumb(); ?>
+			<?php echo DispatchAPI::outputBreadCrumb(); ?>
 			<hr class="clear" />
 			<!-- <div class="donate"><?php if(!empty(self::$donateButton)){echo self::$donateButton;}?></div> -->
 			

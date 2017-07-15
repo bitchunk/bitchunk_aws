@@ -8,13 +8,14 @@ define("THUMB_PATH", ROOTDIR. '/thumbs/');
 define("MUSIC_PATH", ROOTDIR. '/music/');
 define("SOUNDS_PATH", SYSDIR. '/sounds/');
 define('APP_PATH', SYSDIR. '/app/');
-define("PHP_LIBRARY_DIR", SYSDIR. "/lib");
+define('APP_DIR', SYSDIR. '/app/');
+define("PHP_LIBRARY_DIR", SYSDIR. "/lib/");
 
 define("MODEL_PATH", SYSDIR. "models/");
 define("CONTROLLER_PATH", SYSDIR. "controllers/");
 define("DATA_PATH", SYSDIR. "datafiles/");
 define("PROP_PATH", SYSDIR. "properties/");
-define("VIEW_PATH", SYSDIR. "views");
+define("VIEW_PATH", SYSDIR. "views/");
 define("TEMPLATE_PATH", VIEW_PATH. "/templates");
 
 
@@ -26,6 +27,7 @@ define("MUSIC_URI", WEBHOME. 'music/');
 define("PICT_URI", WEBHOME. 'pictures');
 define("THUMB_URI", WEBHOME. 'thumbs');
 define("BANNER_URI", WEBHOME. 'img/banner');
+define('APP_URI', SYSDIR. 'app/');
 
 
 define("DEFAULT_ENCODE", "utf-8");

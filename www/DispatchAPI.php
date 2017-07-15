@@ -1,0 +1,328 @@
+<?php
+chdir(dirname(__FILE__));
+require_once ('./properties/common.php');
+class DispatchAPI {
+	static $ROOT_PATH = APP_PATH;
+	static $DEFAULT_CARDSMETA = 'common';
+	static $cardsmeta = null;
+	static $additionalScripts = array();
+	static $donateButton = '';
+	static $MODULE_DIRS = array('default' => '', 'page' => '', 'app' => 'app/', 'api' => 'api/', 'oauth' => 'oauth/' ,'users' => 'users/');
+	static $DEFAULT_TEMPLATE = 'page';
+
+	static $additionalHeaders = array();
+	static $headerBase = 'common';
+	static $breadcrumb = array(array('name' => 'TOP', 'link' => '/'));
+	static $pagetitle = SITE_NAME;
+	static $pagedescription = SITE_DESCRIPTION;
+	static $pagekeywords = SITE_KEYWORDS;
+	
+	function dispatch() {
+		$uri = $_SERVER['REQUEST_URI'];
+		$get = $_GET;
+		
+		if (!empty($uri)) {
+			$info = parse_url($uri);
+			$name = @$info['path'];
+			$query = @$info['query'];
+			
+			$info = pathinfo($name);
+			
+			$name = str_replace(self::$ROOT_PATH, '', $name);
+		} else {
+			$query = "";
+		}
+		if ($name == '/' || empty($name)) {
+			$name .= 'index';
+		}
+		
+		$module = self::parseModule($name);
+//		var_dump($module);
+		$this->moduleView($module);
+		
+		//htaccessで振り分け
+		if(!empty($info['extension'])){
+			self::contentView($name);
+		}
+		
+		exit ;
+	}
+
+	static function parseModule($path){
+		$dirs = self::$MODULE_DIRS;
+		$found = false;
+		$path = rtrim($path, '/');
+		$mod = array();
+		preg_match("/^\/?(\w*)\/?/" , $path, $mod);
+		$mod = $mod[1];
+		foreach($dirs as $m => $d){
+//		var_dump($d, $m, $path, $mod );
+//			if(strpos($path, $m) > -1){
+			if($mod == $m){
+				$found = true;
+				break;
+			}
+		}
+		if(!$found){
+			$m = self::$DEFAULT_TEMPLATE;
+		}
+		$module = $m;
+		$query = preg_replace("/^\/?{$m}\/?/" , '', $path);
+		return array('module' => $module, 'query' => $query);
+	}
+	
+	function moduleView($module){
+		if(array_key_exists($module['module'], self::$MODULE_DIRS)){
+			$module['query'] = empty($module['query']) ? 'index' : $module['query']; 
+			$func = $module['module'].'View';
+			$this->$func($module['query']);
+		}else{
+			$this->notfound();
+		}
+		exit;
+	}
+	
+	static function isAPI($name = ""){
+		$path = self::$MODULE_DIR_API;
+		if(strstr($name, $path) != false){
+			return true;
+		}
+		return false;
+	}
+	
+	static function isAPP($name = ""){
+		if(strstr($name, self::$MODULE_DIR_APP) != false){
+			return true;
+		}
+		return false;
+	}
+	
+	static function isOauth($name = ""){
+		if(strstr($name, self::$MODULE_DIR_OAUTH) != false){
+			return true;
+		}
+		return false;
+	}
+	
+	static function isUsers($name = ""){
+		if(strstr($name, self::$MODULE_DIR_USERS) != false){
+			return true;
+		}
+		return false;
+	}
+
+	function notfound() {
+		header("HTTP/1.0 404 Not Found");
+		exit ;
+	}
+	
+	
+	function defaultView($name){
+		///name
+		if (file_exists(CONTROLLER_PATH. $name . '.php')) {
+			require_once (CONTROLLER_PATH. $name. '.php');
+		}else{
+			require_once (VIEW_PATH. 'notfound.php');
+		}
+		exit;
+	}
+
+	function apiView($name){
+		///api/name
+		if (file_exists(API_DIR . $name . '.php')) {
+			require_once(API_DIR. "AjaxServerBase.php");
+			 //require内でセットすること
+			$apiClass = '';
+			require_once(API_DIR. $name. '.php');
+			
+			if(!empty($apiClass)){
+				$api = new $apiClass();
+				$api->process();
+			}
+		}else{
+			require_once (API_DIR. 'notfound.php');
+		}
+		exit;
+	}
+
+	function oauthView($name){
+		///api/name
+		if (file_exists(OAUTH_DIR . $name . '/index.php')) {
+			require_once (OAUTH_DIR. $name. '/index.php');
+		}else{
+			require_once (SYSDIR. 'notfound.php');
+		}
+		exit;
+	}
+
+	function usersView($name){
+		///api/name
+		if (file_exists(SYSDIR . $name . '/index.php')) {
+			require_once (SYSDIR. $name. '/index.php');
+		}else{
+			require_once (USERS_DIR. 'notfound.php');
+		}
+		exit;
+	}
+	
+	function appView($name){
+		///api/name
+//		var_dump(file_exists(APP_DIR. $name. '/index.php'), APP_DIR. $name. '/index.php');exit;
+//		var_dump($_SERVER);
+//		if(strstr($_SERVER['HTTP_REFERER'], HOST_NAME) === false){
+//			$this->pageView('index');
+//			exit;
+//		}
+		
+		if (file_exists(APP_DIR. $name. '/index.php')) {
+			require_once (APP_DIR. $name. '/index.php');
+		}else if (file_exists(APP_DIR. $name. '/index.html')) {
+			require_once (APP_DIR. $name. '/index.html');
+		}else{
+			$this->notfound();
+//			header('location: /app');
+//			require_once (APP_DIR. 'index.php');
+		}
+		exit;
+	}
+	
+	function contentView($name){
+		///api/name
+		// var_dump(basename(SYSDIR . $name . ''));
+		if (file_exists(SYSDIR . $name)) {
+			require_once (SYSDIR. $name);
+		}else{
+			$this->notfound();
+		}
+		exit;
+	}
+
+	static function pageView($viewPageName ) {
+//	var_dump($viewPageName, !file_exists(CONTROLLER_PATH . $viewPageName . '.php'));
+		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')
+				|| !file_exists(VIEW_PATH . $viewPageName . '.php')) {
+			$viewPageName = 'notfound';
+		}
+
+
+//		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')) {
+//			$viewPageName = 'index';
+//		}
+		require_once (CONTROLLER_PATH . $viewPageName . '.php');
+		require_once (VIEW_PATH . 'common/header.php');
+//		if ($viewPageName != 'index') {
+//			require_once (VIEW_PATH . 'common/navigator.php');
+//		}
+		require_once (VIEW_PATH . $viewPageName . '.php');
+		require_once (VIEW_PATH . 'common/footer.php');
+	}
+	
+	static function appendJS($filename)
+	{
+		if(!is_array($filename)){
+			$filename = array($filename);
+		}
+		foreach($filename as $file){
+			self::$additionalScripts[] = $file;
+		}
+	}
+	
+	static function appendBreadCrumb($str, $link){
+		array_push(self::$breadcrumb, array('name' => $str, 'link' => $link));
+	}
+	
+	static function outputBreadCrumb(){
+		$str = '<ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">';
+		foreach(self::$breadcrumb as $index=>$row){
+			$str .= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
+			if($index == count(self::$breadcrumb) - 1){
+				$str .= '<span itemprop="name">'. $row['name']. '</span>';
+			}else{
+				$str .= '<a itemprop="item" href="'. $row['link']. '" ><span itemprop="name">'. $row['name']. '</span></a>';
+			}
+			$str .= '<meta itemprop="position" content="'. ($index + 1). '" />';
+			$str .= '</li>';
+		}
+		'</ul>';
+		return $str;
+	}
+	static function setPageTitle($title, $fullEnable = false){
+		self::$pagetitle = !$fullEnable ? $title. ' | '. self::$pagetitle : $title;
+	}
+	static function pageTitle(){
+		return self::$pagetitle;
+	}
+
+	static function pageDescription(){
+		return self::$pagedescription;
+	}
+
+	static function pageKeywords(){
+		return self::$pagekeywords;
+	}
+	
+	function recursive_array($arr, $rec){
+		if(count($arr) > 0){
+			$rec[] = array_pop($arr);
+		}
+	}
+	
+	static function getIgnore(){
+		$csv = file_get_contents(PICTURE_IGNORE_FILES_PATH);
+		$csv = str_replace("\r\n", "\n", $csv);
+		$csv = trim($csv);
+		$csv = explode("\n", $csv);
+		$keys = array_shift($csv);
+		$ignore = array();
+		$keys = explode(',', $keys);
+		// foreach($keys as $key){
+			// $ignore[trim($key, '"')] = array();
+		// }
+		// category	year	name
+		
+		$keyLength = count($keys);
+		foreach($csv as $row){
+			$vals = explode(",", $row);
+			foreach($vals as $index => $val){
+				$val = trim($val, '"');
+				if(empty($val)){
+					continue;
+				}
+				$ignore[$val] = $index + 1 < $keyLength ? true : $val;
+			}
+		}
+		
+		return $ignore;
+	}
+	static function siteUpdatesLog(){
+		$csv = new SplFileObject(VIEW_PATH . 'updates.csv');
+		$csv->setFlags(SplFileObject::READ_CSV);
+		
+		$columns = $csv->current();
+		$csv->next();
+		$updates = array();
+		while (!$csv->eof()) {
+			$cols = $csv->current();
+			$val = array();
+			if(count($cols) != count($columns)){
+				break;
+			}
+			foreach($cols as $i => $c){
+				$val[$columns[$i]] = $c;
+			}
+			$updates[] = $val;
+			$csv->next();
+		}
+		return $updates;
+	}
+	
+	static function is_mobile(){
+		$ua = $_SERVER['HTTP_USER_AGENT'];
+		if((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false)) {
+			return true;
+		}
+		return false;
+	}
+};
+$dis = new DispatchAPI();
+$dis->dispatch();

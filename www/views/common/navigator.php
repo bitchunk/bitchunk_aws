@@ -1,5 +1,5 @@
 <nav>
-	<a href="/top"><?php echo DispatchController::outputBreadCrumb(); ?></a>
+	<a href="/top"><?php echo DispatchAPI::outputBreadCrumb(); ?></a>
 	<!-- <div class="donate"><?php if(!empty(self::$donateButton)){echo self::$donateButton;}?></div> -->
 	<hr class="clear" />
 </nav>

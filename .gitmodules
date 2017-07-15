@@ -1,3 +1,9 @@
 [submodule "www/js/chunklekit"]
 	path = www/js/chunklekit
 	url = git@github.com:oshiimizunohuta/chunklekit.git
+[submodule "www/app/encode_mailaddr"]
+	path = www/app/encode_mailaddr
+	url = git@github.com:oshiimizunohuta/encode_mailaddr.git
+[submodule "www/app/thumbtri"]
+	path = www/app/thumbtri
+	url = git@github.com:oshiimizunohuta/thumbtri.git
