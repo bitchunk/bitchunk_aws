@@ -8,7 +8,7 @@
 			<h3><a href="/app/pixelword_printer" target="_blank" >PixelWord Printer</a></h3>
 			<p>8bitな文字入力アプリ</p>
 			<p>その時代の配置を意識した濁点半濁点の位置の設定、画像として出力もできます。</p>
-			<p class="text_center"><img src="/img/lablist/encode_mailaddr_01.png" /></p>
+			<p class="text_center"><img src="/img/lablist/pixwordprinter.png" /></p>
 		</article>
 	</section>
 	<section>
