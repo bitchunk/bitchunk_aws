@@ -66,4 +66,17 @@ define("SITE_AUTHER", "bitchunk");
 define("SITE_KEYWORDS", "pixel contents,retro sounds,web applicatioins");
 define("SITE_DESCRIPTION", "Web Contents Creative Site");
 
-
+/**
+ * google codes
+ */
+define("GOOGLECODE_ANALYTICS", '
+');
+define("GOOGLECODE_ADS", '
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5168032248020758",
+    enable_page_level_ads: true
+  });
+</script>
+');

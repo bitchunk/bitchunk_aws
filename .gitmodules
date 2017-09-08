@@ -7,3 +7,6 @@
 [submodule "www/app/thumbtri"]
 	path = www/app/thumbtri
 	url = git@github.com:oshiimizunohuta/thumbtri.git
+[submodule "www/app/pixelword_printer"]
+	path = www/app/pixelword_printer
+	url = git@github.com:oshiimizunohuta/pixelword_printer.git
