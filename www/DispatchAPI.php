@@ -173,7 +173,7 @@ class DispatchAPI {
 		}else if (file_exists(APP_DIR. $name. '/index.html')) {
 			$content = file_get_contents(APP_DIR. $name. '/index.html');
 			$gads = GOOGLECODE_ADS;
-			$content = preg_replace("/\<\/head\>\W*\<body/", $gads. "</head>\n\t<body", $content);
+			$content = preg_replace("/\<\/body\>\W*\<\/html\>/", $gads. "</body>\n\t</html>", $content);
 			echo $content;
 //			require_once (APP_DIR. $name. '/index.html');
 		}else{

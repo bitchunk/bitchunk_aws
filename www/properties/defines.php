@@ -73,10 +73,13 @@ define("GOOGLECODE_ANALYTICS", '
 ');
 define("GOOGLECODE_ADS", '
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- appフッター -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5168032248020758"
+     data-ad-slot="1153179391"
+     data-ad-format="auto"></ins>
 <script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-5168032248020758",
-    enable_page_level_ads: true
-  });
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 ');
