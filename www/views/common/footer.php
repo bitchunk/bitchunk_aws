@@ -1,6 +1,5 @@
 <?php if(!self::is_mobile()): ?>
-		<section>
-			<article>
+<div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- コーポ・フッター -->
 <ins class="adsbygoogle"
@@ -10,8 +9,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-			</article>
-		</section>
+</div>
 <?php endif; ?>
 	<hr class="clear">
 	</div>

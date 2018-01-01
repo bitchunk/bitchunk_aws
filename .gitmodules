@@ -10,3 +10,6 @@
 [submodule "www/app/pixelword_printer"]
 	path = www/app/pixelword_printer
 	url = git@github.com:oshiimizunohuta/pixelword_printer.git
+[submodule "www/app/rasterscrollsim"]
+	path = www/app/rasterscrollsim
+	url = git@github.com:oshiimizunohuta/rasterscrollsim.git
