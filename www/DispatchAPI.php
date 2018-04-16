@@ -41,6 +41,8 @@ class DispatchAPI {
 		if($this->defaultView($name)){
 			exit;
 		}
+		
+		$module['module'] = trim($module['module'], '/');
 
 		$this->moduleView($module);
 
@@ -55,7 +57,7 @@ class DispatchAPI {
 	static function parseModule($path){
 		$dirs = self::$MODULE_DIRS;
 		$found = false;
-		$path = trim($path, '/');
+//		$path = trim($path, '/');
 		$mod = array();
 		preg_match("/^\/?(\w*)\/?/" , $path, $mod);
 		$mod = $mod[1];
@@ -124,11 +126,15 @@ class DispatchAPI {
 	function defaultView($name){
 		///name
 		$dpath = SYSDIR. 'default'. $name;
-//		var_dump($dpath);
+		$mt = preg_match('/\/$/', $name);
+//		var_dump($dpath, $mt);
 		if(file_exists($dpath. '/index.php')){
+			if($mt === 0){
+				header('location: '. $name. '/');
+			}
 			chdir($dpath);
 			require_once ($dpath. '/index.php');
-		}else if (file_exists($dpath)) {
+		}else if (file_exists($dpath)){
 			chdir(dirname($dpath));
 			require_once ($dpath);
 		}else{
