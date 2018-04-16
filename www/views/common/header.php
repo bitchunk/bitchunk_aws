@@ -86,16 +86,20 @@ foreach(DispatchAPI::$additionalHeaders as $index=>$tags){
 	<h1><span class="hide"><?php echo SITE_NAME; ?></span></h1>
 	<header>
 		<nav>
-			<div class="head-layer">
-				<h2><span class="hide">メニュー</span><a href="<?php echo PROTOCOL_HOST; ?>"><img id="banner" src="/img/common/logo_header.png"></a></h2>
-				<div class="menu">
-					<a href="<?php echo PROTOCOL_HOST; ?>"><button class="home">ホーム</button></a>
-					<a href="/applist"><button class="apps">アプリ</button></a>
-					<a href="/lab"><button class="lab">実験室</button></a>
-					<a href="/about"><button class="about">サイト概要</button></a>
-					<a href="<?php echo BLOG_HOST; ?>"><button class="blog">ブログ</button></a>
+			<div class="scrollable">
+				<div class="head-layer">
+					<h2><span class="hide">メニュー</span><a href="<?php echo PROTOCOL_HOST; ?>"><img id="banner" src="/img/common/logo_header.png"></a></h2>
+					<div class="menu">
+						<a href="<?php echo PROTOCOL_HOST; ?>"><button class="home">ホーム</button></a>
+						<a href="/applist"><button class="apps">アプリ</button></a>
+						<a href="/lab"><button class="lab">実験室</button></a>
+						<a href="/about"><button class="about">サイト概要</button></a>
+						<a href="<?php echo BLOG_HOST; ?>"><button class="blog">ブログ</button></a>
+						<a href="/press"><button class="press">プレス</button></a>
+						<img src="/img/common/header_buttons_hover.png" style="width: 1px; height: 1px;"/>
+					</div>
+					<hr class="clear" />
 				</div>
-				<hr class="clear" />
 			</div>
 			<hr class="clear" />
 			<?php echo DispatchAPI::outputBreadCrumb(); ?>

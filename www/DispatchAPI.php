@@ -7,7 +7,7 @@ class DispatchAPI {
 	static $cardsmeta = null;
 	static $additionalScripts = array();
 	static $donateButton = '';
-	static $MODULE_DIRS = array('default' => '', 'page' => '', 'app' => 'app/', 'api' => 'api/', 'oauth' => 'oauth/' ,'users' => 'users/');
+	static $MODULE_DIRS = array('default' => 'default', 'page' => '', 'app' => 'app/', 'api' => 'api/', 'oauth' => 'oauth/' ,'users' => 'users/');
 	static $DEFAULT_TEMPLATE = 'page';
 
 	static $additionalHeaders = array();
@@ -35,11 +35,15 @@ class DispatchAPI {
 		if ($name == '/' || empty($name)) {
 			$name .= 'index';
 		}
-		
+
 		$module = self::parseModule($name);
 //		var_dump($module);
+		if($this->defaultView($name)){
+			exit;
+		}
+
 		$this->moduleView($module);
-		
+
 		//htaccessで振り分け
 		if(!empty($info['extension'])){
 			self::contentView($name);
@@ -51,7 +55,7 @@ class DispatchAPI {
 	static function parseModule($path){
 		$dirs = self::$MODULE_DIRS;
 		$found = false;
-		$path = rtrim($path, '/');
+		$path = trim($path, '/');
 		$mod = array();
 		preg_match("/^\/?(\w*)\/?/" , $path, $mod);
 		$mod = $mod[1];
@@ -119,10 +123,17 @@ class DispatchAPI {
 	
 	function defaultView($name){
 		///name
-		if (file_exists(CONTROLLER_PATH. $name . '.php')) {
-			require_once (CONTROLLER_PATH. $name. '.php');
+		$dpath = SYSDIR. 'default'. $name;
+//		var_dump($dpath);
+		if(file_exists($dpath. 'index.php')){
+			chdir($dpath);
+			require_once ($dpath. 'index.php');
+		}else if (file_exists($dpath)) {
+			chdir(dirname($dpath));
+			require_once ($dpath);
 		}else{
-			require_once (VIEW_PATH. 'notfound.php');
+			return false;
+//			require_once (VIEW_PATH. 'notfound.php');
 		}
 		exit;
 	}
@@ -194,23 +205,36 @@ class DispatchAPI {
 	}
 
 	static function pageView($viewPageName ) {
-//	var_dump($viewPageName, !file_exists(CONTROLLER_PATH . $viewPageName . '.php'));
-		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')
-				|| !file_exists(VIEW_PATH . $viewPageName . '.php')) {
+		$cpath = CONTROLLER_PATH . $viewPageName;
+		$vpath = VIEW_PATH . $viewPageName;
+
+		if (file_exists($cpath. '.php')){
+			require_once (CONTROLLER_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/header.php');
+			require_once (VIEW_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/footer.php');
+		}else if(file_exists($vpath. '.php')){
+			require_once (VIEW_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/header.php');
+			require_once (VIEW_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/footer.php');
+		}else if(file_exists($cpath . '/index.php')){
+			chdir($cpath); 
+			require_once (CONTROLLER_PATH . $viewPageName . '/index.php');
+			return;
+		}else if(file_exists($vpath . '/index.php')){
+			chdir($vpath); 
+			require_once (VIEW_PATH . $viewPageName . '/index.php');
+			return;
+		}else{
 			$viewPageName = 'notfound';
+			require_once (CONTROLLER_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/header.php');
+			require_once (VIEW_PATH . $viewPageName . '.php');
+			require_once (VIEW_PATH . 'common/footer.php');
 		}
 
 
-//		if (!file_exists(CONTROLLER_PATH . $viewPageName . '.php')) {
-//			$viewPageName = 'index';
-//		}
-		require_once (CONTROLLER_PATH . $viewPageName . '.php');
-		require_once (VIEW_PATH . 'common/header.php');
-//		if ($viewPageName != 'index') {
-//			require_once (VIEW_PATH . 'common/navigator.php');
-//		}
-		require_once (VIEW_PATH . $viewPageName . '.php');
-		require_once (VIEW_PATH . 'common/footer.php');
 	}
 	
 	static function appendJS($filename)

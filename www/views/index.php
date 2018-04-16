@@ -20,6 +20,7 @@
 					<p><a href="/lab"><button class="lab">研究室</button><span>ラボ／実験的なもの</span></a></p>
 					<p><a href="/about"><button class="about">サイト概要</button><span>サイト概要</span></a></p>
 					<p><a href="<?php echo BLOG_HOST; ?>"><button class="blog">ブログ</button><span>ブログ／bitchunk.log</span></a></p>
+					<p><a href="/press"><button class="press">プレスキット</button><span>プレスキット／参考資料</span></a></p>
 				</div>
 			</nav>
 		</article>

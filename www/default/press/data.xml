@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- example file containing base tags -->
+
+<game>	
+	<title>bitchunk</title>
+	<founding-date>January 1, 2015</founding-date>
+	<website>http://bitchunk.net/</website>
+	<based-in>Tokyo, Japan</based-in>
+	
+	<press-contact>info@mail.bitchunk.net</press-contact>
+	<phone></phone>
+	<address>
+	</address>
+	<socials>
+		<social>
+			<name>twitter.com/shiftal_on</name>
+			<link>twitter.com/shiftal_on</link>
+		</social>
+	</socials>
+
+	<description>	
+		bitchunkはゲーム制作やそれに関連するものを制作します。
+	</description>
+		
+	<histories>
+		<history>
+			<header></header>
+			<text>bitchunkはサイトにつけたタイトルでした。PCゲームを制作。その後ブラウザゲームにプラットフォームを切り替えました。</text>
+		</history>
+		<history>
+			<header>TOTHKUA</header>
+			<text>フリーのPCゲーム。2Dブロック崩しアクション。</text>
+		</history>
+		<history>
+			<header>Litro Sound / Litro Keyboard / Litro Receiver</header>
+			<text>ブラウザチップチューンサウンドエンジン及びシーケンサ・プレイヤー</text>
+		</history>
+		<history>
+			<header>PITMAP</header>
+			<text>対戦ブラウザボードゲーム</text>
+		</history>
+	</histories>
+		
+	<trailers>
+	</trailers>
+	
+	<awards>
+	</awards>
+	
+	<quotes>
+	</quotes>
+	
+	<press-can-request-copy>TRUE</press-can-request-copy> <!-- can be true or false -->
+	<monetization-permission>monetize</monetization-permission> <!-- can be: 	false (no video allowed),
+																			 	ask (permission on case-per-case basis),
+																			 	non-commercial (no monetization allowed),
+																			 	monetize (full permission) -->	
+	<additionals>
+	</additionals>
+	
+	<credits>
+		<credit>
+			<person>shiftalow</person>
+			<website>bitchunk.net</website>
+			<role>Game Creator(program/sound/graphics)</role>
+		</credit>
+	</credits>
+	
+	<contacts>
+		<contact>
+			<name>Inquiries</name>
+			<mail>info@mail.bitchunk.net</mail>
+		</contact>
+		<contact>
+			<name>Twitter</name>
+			<link>http://twitter.com/shiftal_on</link>
+		</contact>
+		<contact>
+			<name>Web</name>
+			<link>http://bitchunk.net</link>
+		</contact>
+	</contacts>
+</game>

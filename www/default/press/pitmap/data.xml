@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<game>
+	<title>PITMAP</title>
+	<release-date>30 January, 2017</release-date>
+	<website>https://pitmap.bitchunk.net/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>Browser(PC / Mac)</name>
+			<link>https://pitmap.bitchunk.net/</link>
+		</platform>
+	</platforms>
+	
+	<prices>
+		<price>
+			<currency>Any</currency>
+			<value>Free</value>
+		</price>
+	</prices>
+
+	<description>
+PITMAPはブラウザでプレイできるボードゲームです。
+誰かのフィールドに隠された「カプセル」を探し出しましょう。
+自分のフィールドにトラップを仕掛けて「カプセル」を守りましょう。 
+トラップの位置を裏読みしたり、いかに高報酬を得るか、戦略性のあるゲームです。
+ //// 
+PITMAP is a network boardgame in web browser.
+Please You get a 'Capsule' from the Other Fields. 
+Please You defend a 'Capsule' from Other Players.
+It is a game with strategy, how to trace the position of traps and how to get high rewards.
+	</description>
+	
+	<histories>
+	</histories>
+	<history>
+		PITMAPはJavascriptで作られたブラウザゲームです。 自社のブラウザサウンドエンジン"LitroSound [https://ltsnd.bitchunk.net]"実用化も兼ねて制作しました。
+	</history>
+
+	<features>
+		<feature>8bitゲーム機を彷彿とさせるドット絵・レンダリングの世界</feature>
+		<feature>かわいらしいキャラクターの豊富なアニメーション</feature>
+		<feature>サウンドも併せて8bitゲーム機ライク（チャンネル優先により際立つ効果音）</feature>
+		<feature>twitterアカウントをもっていればすぐにプレイ可能！全世界の人とカプセルを探し合う</feature>
+		<feature>ロード時間が短い軽快なアプリ（混雑しなければ）</feature>
+	</features>
+	
+	<trailers>
+		<trailer>
+			<name></name>
+			<youtube></youtube>
+			<vimeo></vimeo>
+		</trailer>
+		<trailer>
+			<name>ゲームプレイ</name>
+			<youtube>07-omMBlAl8</youtube>
+			<vimeo></vimeo>
+		</trailer>
+	</trailers>
+	
+	<awards>
+	</awards>
+	<quotes>
+	</quotes>
+	
+	<additionals>
+	</additionals>
+	
+	<credits>
+		<credit>
+			<person>しふたろう</person>
+			<role>開発、グラフィック、サウンド</role>
+		</credit>
+	</credits>
+	<promote>
+			<award></award>
+			<review></review>
+	</promote>
+</game>

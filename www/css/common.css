@@ -222,7 +222,6 @@ nav{
 	text-align: left;
 
 }
-
 nav .head-layer:before, nav .head-layer:after{
 	content: '';
 	display:block;
@@ -263,8 +262,26 @@ nav .head-layer{
 }
 
 @media screen and (max-width:640px){
+	nav{
+	}
+	.head-layer{
+		width: 640px;
+	}
 	.head-layer .menu{
-		display: none;
+		/*display: none;*/
+		display: inline-block;
+	}
+	
+	.scrollable{
+		overflow-x: scroll;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.scrollable h2{
+		display: inline-block;
 	}
 }
 
@@ -306,6 +323,10 @@ button.about{
 }
 button.lab{
 	background-position-x: 0px;
+	background-position-y: -64px;
+}
+button.press{
+	background-position-x: -64px;
 	background-position-y: -64px;
 }
 
@@ -363,6 +384,11 @@ ul.breadcrumb span{
 	vertical-align:bottom;
 }
 @media screen and (max-width:640px){
+	ul.breadcrumb{
+		margin-top: 64px;
+		height: 16px;
+		line-height: 14px;
+	}
 	ul.breadcrumb span{
 /*		font-size: 0.6rem;*/
 	}
@@ -434,6 +460,10 @@ contents{
 	border-width:16px;
 	/*border-image-width: 16px;*/
 }
+.contents section article img{
+	vertical-align:middle; width:320px; height: auto;
+}
+
 .contents section nav{
 	padding: 0;
 }
@@ -459,6 +489,10 @@ contents{
 	.date{
 		margin:0.2rem;
 		display:block;
+	}
+	
+	.contents section article img{
+		width: 100%;
 	}
 
 }
