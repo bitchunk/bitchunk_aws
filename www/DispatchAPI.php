@@ -123,11 +123,11 @@ class DispatchAPI {
 	
 	function defaultView($name){
 		///name
-		$dpath = SYSDIR. 'default'. $name. '/';
+		$dpath = SYSDIR. 'default'. $name;
 //		var_dump($dpath);
-		if(file_exists($dpath. 'index.php')){
+		if(file_exists($dpath. '/index.php')){
 			chdir($dpath);
-			require_once ($dpath. 'index.php');
+			require_once ($dpath. '/index.php');
 		}else if (file_exists($dpath)) {
 			chdir(dirname($dpath));
 			require_once ($dpath);
