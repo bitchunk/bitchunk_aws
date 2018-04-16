@@ -44,9 +44,6 @@ RewriteRule ^(.*)$ DispatchImage.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/DispatchAPI.php$
-#RewriteCond %{REQUEST_URI} ^.*\.php$ [or]
-RewriteCond %{REQUEST_URI} !^.*\..*$ [or]
-RewriteCond %{REQUEST_URI} ^\/$
 RewriteRule ^(.*)$ DispatchAPI.php [L]
 
 
