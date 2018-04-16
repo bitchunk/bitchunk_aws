@@ -21,6 +21,9 @@ AddHandler cgi-script htaccess
 RewriteEngine On
 RewriteBase /
 
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
 #FontFiles Rewrite
 RewriteCond %{REQUEST_URI} \.ttf$
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.gz -s
@@ -41,7 +44,9 @@ RewriteRule ^(.*)$ DispatchImage.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/DispatchAPI.php$
-
+#RewriteCond %{REQUEST_URI} ^.*\.php$ [or]
+RewriteCond %{REQUEST_URI} !^.*\..*$ [or]
+RewriteCond %{REQUEST_URI} ^\/$
 RewriteRule ^(.*)$ DispatchAPI.php [L]
 
 
