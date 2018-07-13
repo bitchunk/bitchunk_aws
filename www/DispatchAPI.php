@@ -1,6 +1,12 @@
 <?php
 chdir(dirname(__FILE__));
 require_once ('./properties/common.php');
+
+if(!defined('BLOG_HOST')){
+	header("location: ". PROTOCOL_HOST);
+
+}
+
 class DispatchAPI {
 	static $ROOT_PATH = APP_PATH;
 	static $DEFAULT_CARDSMETA = 'common';
@@ -343,7 +349,10 @@ class DispatchAPI {
 	}
 	
 	static function is_mobile(){
-		$ua = $_SERVER['HTTP_USER_AGENT'];
+		$ua = filter_input(INPUT_SERVER , 'HTTP_USER_AGENT');
+		if($ua === false){
+			return false;
+		}
 		if((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false)) {
 			return true;
 		}
