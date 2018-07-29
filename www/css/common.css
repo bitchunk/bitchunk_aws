@@ -273,6 +273,7 @@ nav .head-layer{
 	}
 	
 	.scrollable{
+		height: 64px;
 		overflow-x: scroll;
 		position: fixed;
 		left: 0;
