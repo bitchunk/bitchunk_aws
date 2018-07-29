@@ -264,6 +264,9 @@ nav .head-layer{
 @media screen and (max-width:640px){
 	nav{
 	}
+	.scrollable h2{
+		display: none;
+	}
 	.head-layer{
 		width: 640px;
 	}
