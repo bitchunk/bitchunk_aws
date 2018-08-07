@@ -4,6 +4,12 @@
 	<section class="news">
 		<article>
 			<h2>おしらせ</h2>
+			<h3 style="text-align:center; color:crimson">多人数非同期対戦ボードゲーム<br />PITMAPを公開中</h3>
+			<a href="https://pitmap.bitchunk.net" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><img src="/img/applist/pitmap_02.jpg" style="height:10rem; width:auto;" /></p>
+				<p style="text-align: center;">フィールドに隠されたカプセルを見つけよう！</p>
+			</a>
+			<hr/>
 			<?php $log = self::siteUpdatesLog(); ?>
 			<?php foreach($log as $row): ?>
 			<p><span class="date"><?php echo $row['date']; ?></span><?php echo $row['text']; ?></p>

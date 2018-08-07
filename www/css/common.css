@@ -117,10 +117,8 @@ section{
 }
 
 hr{
-	border-width: 0 0.4rem 0.8rem 16.0rem;
 	border-style: solid;
-	border-color: #ae8d19 transparent;
-	border-radius: 3rem;
+	border-color: #AC7C00;
 	clear: both;
 }
 
