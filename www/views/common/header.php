@@ -71,7 +71,7 @@ foreach(DispatchAPI::$additionalHeaders as $index=>$tags){
 	echo $tags. "\n";
 }
 ?>
-<?php if(self::is_mobile()): ?>
+<?php if(self::is_mobile()): /*?>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -79,7 +79,7 @@ foreach(DispatchAPI::$additionalHeaders as $index=>$tags){
     enable_page_level_ads: true
   });
 </script>
-<?php endif; ?>
+<?php */ endif; ?>
 </head>
 <body>
 <div id="container">

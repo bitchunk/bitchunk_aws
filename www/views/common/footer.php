@@ -1,6 +1,6 @@
 <?php if(!self::is_mobile()): ?>
 <div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 <!-- コーポ・フッター -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
