@@ -5,6 +5,14 @@
 	</section>
 	<section>
 		<article>
+			<h3><a href="/app/dropshow" target="_blank" >Instant Slideshow</a></h3>
+			<p>ドラッグ＆ドロップ対応　インスタントスライドショー</p>
+			<p>お気に入りの画像をブラウザにドロップしてスライドショーをします。</p>
+			<p class="text_center"><img src="/img/lablist/dropshow.gif" /></p>
+		</article>
+	</section>
+	<section>
+		<article>
 			<h3><a href="/app/rasterscrollsim" target="_blank" >CK Raster Scroll Simulator</a></h3>
 			<p>Chunkle kit ラスタースクロールシミュレーター</p>
 			<p>自作ライブラリのスクロールシミュレーターです。複雑なスクロール操作を構成する時のテスト用。</p>
