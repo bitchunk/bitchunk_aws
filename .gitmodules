@@ -13,3 +13,6 @@
 [submodule "www/app/rasterscrollsim"]
 	path = www/app/rasterscrollsim
 	url = git@github.com:oshiimizunohuta/rasterscrollsim.git
+[submodule "www/app/dropshow"]
+	path = www/app/dropshow
+	url = git@github.com:oshiimizunohuta/dropshow.git
