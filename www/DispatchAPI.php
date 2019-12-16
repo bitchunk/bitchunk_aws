@@ -22,18 +22,18 @@ class DispatchAPI {
 	static $pagetitle = SITE_NAME;
 	static $pagedescription = SITE_DESCRIPTION;
 	static $pagekeywords = SITE_KEYWORDS;
-	
+
 	function dispatch() {
 		$uri = $_SERVER['REQUEST_URI'];
 		$get = $_GET;
-		
+
 		if (!empty($uri)) {
 			$info = parse_url($uri);
 			$name = @$info['path'];
 			$query = @$info['query'];
-			
+
 			$info = pathinfo($name);
-			
+
 			$name = str_replace(self::$ROOT_PATH, '', $name);
 		} else {
 			$query = "";
@@ -47,7 +47,7 @@ class DispatchAPI {
 		if($this->defaultView($name)){
 			exit;
 		}
-		
+
 		$module['module'] = trim($module['module'], '/');
 
 		$this->moduleView($module);
@@ -56,7 +56,7 @@ class DispatchAPI {
 		if(!empty($info['extension'])){
 			self::contentView($name);
 		}
-		
+
 		exit ;
 	}
 
@@ -82,10 +82,10 @@ class DispatchAPI {
 		$query = preg_replace("/^\/?{$m}\/?/" , '', $path);
 		return array('module' => $module, 'query' => $query);
 	}
-	
+
 	function moduleView($module){
 		if(array_key_exists($module['module'], self::$MODULE_DIRS)){
-			$module['query'] = empty($module['query']) ? 'index' : $module['query']; 
+			$module['query'] = empty($module['query']) ? 'index' : $module['query'];
 			$func = $module['module'].'View';
 			$this->$func($module['query']);
 		}else{
@@ -93,7 +93,7 @@ class DispatchAPI {
 		}
 		exit;
 	}
-	
+
 	static function isAPI($name = ""){
 		$path = self::$MODULE_DIR_API;
 		if(strstr($name, $path) != false){
@@ -101,21 +101,21 @@ class DispatchAPI {
 		}
 		return false;
 	}
-	
+
 	static function isAPP($name = ""){
 		if(strstr($name, self::$MODULE_DIR_APP) != false){
 			return true;
 		}
 		return false;
 	}
-	
+
 	static function isOauth($name = ""){
 		if(strstr($name, self::$MODULE_DIR_OAUTH) != false){
 			return true;
 		}
 		return false;
 	}
-	
+
 	static function isUsers($name = ""){
 		if(strstr($name, self::$MODULE_DIR_USERS) != false){
 			return true;
@@ -127,8 +127,8 @@ class DispatchAPI {
 		header("HTTP/1.0 404 Not Found");
 		exit ;
 	}
-	
-	
+
+
 	function defaultView($name){
 		///name
 		$dpath = SYSDIR. 'default'. $name;
@@ -157,7 +157,7 @@ class DispatchAPI {
 			 //require内でセットすること
 			$apiClass = '';
 			require_once(API_DIR. $name. '.php');
-			
+
 			if(!empty($apiClass)){
 				$api = new $apiClass();
 				$api->process();
@@ -187,23 +187,23 @@ class DispatchAPI {
 		}
 		exit;
 	}
-	
+
 	function appView($name){
 		///api/name
-		
+
 		if (file_exists(APP_DIR. $name. '/index.php')) {
 			require_once (APP_DIR. $name. '/index.php');
 		}else if (file_exists(APP_DIR. $name. '/index.html')) {
 			$content = file_get_contents(APP_DIR. $name. '/index.html');
-//			$gads = GOOGLECODE_ADS;
-//			$content = preg_replace("/\<\/body\>\W*\<\/html\>/", $gads. "</body>\n\t</html>", $content);
+			$gads = GOOGLECODE_ADS;
+			$content = preg_replace("/\<\/body\>\W*\<\/html\>/", $gads. "</body>\n\t</html>", $content);
 			echo $content;
 		}else{
 			$this->notfound();
 		}
 		exit;
 	}
-	
+
 	function contentView($name){
 		///api/name
 		// var_dump(basename(SYSDIR . $name . ''));
@@ -230,11 +230,11 @@ class DispatchAPI {
 			require_once (VIEW_PATH . $viewPageName . '.php');
 			require_once (VIEW_PATH . 'common/footer.php');
 		}else if(file_exists($cpath . '/index.php')){
-			chdir($cpath); 
+			chdir($cpath);
 			require_once (CONTROLLER_PATH . $viewPageName . '/index.php');
 			return;
 		}else if(file_exists($vpath . '/index.php')){
-			chdir($vpath); 
+			chdir($vpath);
 			require_once (VIEW_PATH . $viewPageName . '/index.php');
 			return;
 		}else{
@@ -247,7 +247,7 @@ class DispatchAPI {
 
 
 	}
-	
+
 	static function appendJS($filename)
 	{
 		if(!is_array($filename)){
@@ -257,11 +257,11 @@ class DispatchAPI {
 			self::$additionalScripts[] = $file;
 		}
 	}
-	
+
 	static function appendBreadCrumb($str, $link){
 		array_push(self::$breadcrumb, array('name' => $str, 'link' => $link));
 	}
-	
+
 	static function outputBreadCrumb(){
 		$str = '<ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">';
 		foreach(self::$breadcrumb as $index=>$row){
@@ -291,13 +291,13 @@ class DispatchAPI {
 	static function pageKeywords(){
 		return self::$pagekeywords;
 	}
-	
+
 	function recursive_array($arr, $rec){
 		if(count($arr) > 0){
 			$rec[] = array_pop($arr);
 		}
 	}
-	
+
 	static function getIgnore(){
 		$csv = file_get_contents(PICTURE_IGNORE_FILES_PATH);
 		$csv = str_replace("\r\n", "\n", $csv);
@@ -310,7 +310,7 @@ class DispatchAPI {
 			// $ignore[trim($key, '"')] = array();
 		// }
 		// category	year	name
-		
+
 		$keyLength = count($keys);
 		foreach($csv as $row){
 			$vals = explode(",", $row);
@@ -322,13 +322,13 @@ class DispatchAPI {
 				$ignore[$val] = $index + 1 < $keyLength ? true : $val;
 			}
 		}
-		
+
 		return $ignore;
 	}
 	static function siteUpdatesLog(){
 		$csv = new SplFileObject(VIEW_PATH . 'updates.csv');
 		$csv->setFlags(SplFileObject::READ_CSV);
-		
+
 		$columns = $csv->current();
 		$csv->next();
 		$updates = array();
@@ -346,7 +346,7 @@ class DispatchAPI {
 		}
 		return $updates;
 	}
-	
+
 	static function is_mobile(){
 		$ua = filter_input(INPUT_SERVER , 'HTTP_USER_AGENT');
 		if($ua === false){
