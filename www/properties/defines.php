@@ -71,7 +71,18 @@ define("SITE_DESCRIPTION", "Web Contents Creative Site");
  */
 define("GOOGLECODE_ANALYTICS", '
 ');
-define("GOOGLECODE_ADS", '
+define("GOOGLECODE_ADS_PC", '
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PCフッター -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:234px;height:60px"
+     data-ad-client="ca-pub-5168032248020758"
+     data-ad-slot="2767325429"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+');
+define("GOOGLECODE_ADS_APP", '
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- appフッター -->
 <ins class="adsbygoogle"
