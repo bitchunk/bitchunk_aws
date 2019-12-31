@@ -4,6 +4,12 @@
 	<section class="news">
 		<article>
 			<h2>おしらせ</h2>
+			<h3 style="text-align:center; color:crimson"><strong>2Dアクションゲーム(Platformer)<br />KONSAIRIを無料公開中（β版）</strong></h3>
+			<a href="https://bitchunk.itch.io/konsairi" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><img src="/img/applist/konsairi_01.gif" style="height:10rem; width:auto;" /></p>
+				<p style="text-align: center;"><strong>きつね</strong>の仔が主人公！<strong>根菜</strong>を採りながら冒険！！</p>
+			</a>
+			<hr>
 			<h3 style="text-align:center; color:crimson">多人数非同期対戦ボードゲーム<br />PITMAPを公開中</h3>
 			<a href="https://pitmap.bitchunk.net" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
 				<p style="text-align: center;"><img src="/img/applist/pitmap_02.jpg" style="height:10rem; width:auto;" /></p>
