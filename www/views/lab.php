@@ -6,8 +6,8 @@
 	<section>
 		<article>
 			<h3><a href="/app/dropshow" target="_blank" >Instant Slideshow</a></h3>
-			<p>ドラッグ＆ドロップ対応　インスタントスライドショー</p>
-			<p>お気に入りの画像をブラウザにドロップしてスライドショーをします。</p>
+			<p><strong>ドラッグ＆ドロップ</strong>対応　<strong>インスタントスライドショー</strong></p>
+			<p>お気に入りの画像を<strong>ブラウザ</strong>にドロップして<strong>スライドショー</strong>をします。</p>
 			<p><b>※サーバーに画像アップロードするような通信は行いません</b></p>
 			<p class="text_center"><img src="/img/lablist/dropshow.gif" /></p>
 		</article>
