@@ -5,6 +5,16 @@
 	</section>
 	<section>
 		<article>
+			<h3><a href="https://shiftal-on.booth.pm/items/1274787" >「KONSAIRI」 製品版（BOOTHで購入）</a></h3>
+			<h3><a href="https://bitchunk.itch.io/konsairi" >「KONSAIRI」 製品版（itch.ioで購入）</a></h3>
+			<p>キツネの仔が主人公！根菜を使って進め！</p>
+			<p>体験版はブラウザでプレイ可能です。</p>
+			<p><a href="/app/konsairi/" >「KONSAIRI」 体験版</a></p>
+			<p class="text_center"><img src="/img/applist/konsairi_03.gif" /><img src="/img/applist/konsairi_02.png" /></p>
+		</article>
+	</section>
+	<section>
+		<article>
 			<h3><a href="https://pitmap.bitchunk.net" >PITMAP</a></h3>
 			<p>懐かしい雰囲気を重視したネットワークボードゲーム！</p>
 			<p>ダウンロード不要のブラウザゲームです。</p>

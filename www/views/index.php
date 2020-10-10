@@ -4,6 +4,18 @@
 	<section class="news">
 		<article>
 			<h2>おしらせ</h2>
+			<h3 style="text-align:center; color:crimson"><strong>根菜！きつね！<br />KONSAIRIリリース！！</strong></h3>
+				<p style="text-align: center;"><img src="/img/applist/konsairi_02.png" style="height:10rem; width:auto;" /></p>
+			<a href="https://shiftal-on.booth.pm/items/1274787" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><strong>BOOTHでリリース！！</p>
+			</a>
+			<a href="https://bitchunk.itch.io/konsairi" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><strong>itch.ioでリリース！！</p>
+			</a>
+			<a href="/app/konsairi" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><strong>ブラウザで体験版をプレイ！！</p>
+			</a>
+			<hr>
 			<h3 style="text-align:center; color:crimson"><strong>2Dアクションゲーム(Platformer)<br />KONSAIRIを無料公開中（β版）</strong></h3>
 			<a href="https://bitchunk.itch.io/konsairi" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
 				<p style="text-align: center;"><img src="/img/applist/konsairi_01.gif" style="height:10rem; width:auto;" /></p>
