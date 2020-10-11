@@ -17,6 +17,7 @@ define("DATA_PATH", SYSDIR. "datafiles/");
 define("PROP_PATH", SYSDIR. "properties/");
 define("VIEW_PATH", SYSDIR. "views/");
 define("TEMPLATE_PATH", VIEW_PATH. "/templates");
+define("META_PATH", VIEW_PATH. 'cardsmeta/');
 
 
 define("CSS_PATH", SYSDIR. "css/");

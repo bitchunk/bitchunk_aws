@@ -10,7 +10,7 @@
 			<p>キツネの仔が主人公！根菜を使って進め！</p>
 			<p>体験版はブラウザでプレイ可能です。</p>
 			<p><a href="/app/konsairi/" >「KONSAIRI」 体験版</a></p>
-			<p class="text_center"><img src="/img/applist/konsairi_03.gif" /><img src="/img/applist/konsairi_02.png" /></p>
+			<p class="text_center"><img src="/img/applist/konsairi_03.gif" /><img src="/img/applist/konsairi_02.jpg" /></p>
 		</article>
 	</section>
 	<section>

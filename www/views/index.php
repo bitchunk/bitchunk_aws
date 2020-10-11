@@ -5,7 +5,7 @@
 		<article>
 			<h2>おしらせ</h2>
 			<h3 style="text-align:center; color:crimson"><strong>根菜！きつね！<br />KONSAIRIリリース！！</strong></h3>
-				<p style="text-align: center;"><img src="/img/applist/konsairi_02.png" style="height:10rem; width:auto;" /></p>
+				<p style="text-align: center;"><img src="/img/applist/konsairi_02.jpg" style="height:10rem; width:auto;" /></p>
 			<a href="https://shiftal-on.booth.pm/items/1274787" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
 				<p style="text-align: center;"><strong>BOOTHでリリース！！</p>
 			</a>

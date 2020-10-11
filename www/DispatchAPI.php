@@ -195,8 +195,14 @@ class DispatchAPI {
 			require_once (APP_DIR. $name. '/index.php');
 		}else if (file_exists(APP_DIR. $name. '/index.html')) {
 			$content = file_get_contents(APP_DIR. $name. '/index.html');
-			$gads = self::is_mobile() ? GOOGLECODE_ADS_APP : GOOGLECODE_ADS_PC;
-			$content = preg_replace("/\<\/body\>\W*\<\/html\>/", $gads. "</body>\n\t</html>", $content);
+			
+			$name = str_replace('/', '', $name);
+			if(file_exists(META_PATH. $name. '.php')){
+				$insContents = file_get_contents(META_PATH. $name. '.php');
+				$content = preg_replace("@<title>.*</title>@", "$0\n".$insContents, $content);
+			}
+			//$gads = self::is_mobile() ? GOOGLECODE_ADS_APP : GOOGLECODE_ADS_PC;
+			//$content = preg_replace("/\<\/body\>\W*\<\/html\>/", $gads. "</body>\n\t</html>", $content);
 			echo $content;
 		}else{
 			$this->notfound();
