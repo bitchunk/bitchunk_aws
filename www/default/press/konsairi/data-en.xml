@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<game>
+	<title>KONSAIRI</title>
+	<release-date>28 October, 2020</release-date>
+	<website>https://bitchunk.net/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>Steam</name>
+			<link>http://store.steampowered.com/app/1448220/</link>
+		</platform>
+	</platforms>
+	
+	<prices>
+		<price>
+			<currency>USD</currency>
+			<value>$10.99</value>
+		</price>
+		<price>
+			<currency>EUR</currency>
+			<value>€8,99</value>
+		</price>
+		<price>
+			<currency>JPY</currency>
+			<value>￥1,120</value>
+		</price>
+		<price>
+			<currency>CAD</currency>
+			<value>CDN$12.49</value>
+		</price>				
+		<price>
+			<currency>GBP</currency>
+			<value>£8.29</value>
+		</price>
+	</prices>
+
+	<description>KONSAIRI is a 2D action-adventure game with PICO-8 specifications made in only 128KB.
+Find a veggie, hold it up (KONPSI), eat it, throw it, etc., and move on!
+Adventure in a big world with PICO-8 specs and cute little dots!
+
+Action Mode
+ - Let's find and harvest some native veggie!
+ - Find the residents sleeping in the area and wake them up with the veggie "BEET"!
+ - Use the "KONPSI" to defeat your enemies by throwing the veggies or raise them and use the "KONPSI" to overcome the obstacles in your path!
+ - As time goes on, the life value will decrease a little bit. We should have some veggies to eat!
+
+Cooking Mode
+ - Cut the harvested veggies at the right time and cook them in a pot. Let's make it delicious!
+ - When you finish eating, your life value is restored, and your jumping ability and other stats are boosted! They might overeat or get bored, right?
+ - When the health level of the inhabitants is high, you can get "BELL", which opens up the upper limit of the status, and "veggie Seeds", which can increase the harvest area.
+ - Residents will give you directions. Eat with as many residents as you can to reach new areas!
+
+Dungeon Mode
+ - As the game progresses, you may come to a 3D maze dungeon.
+ - Rely on the mini-map (volatile auto-mapping) for BELL hints and exits! Again, veggies are your best friend here!
+ - If the enemy blocks your path, throw your veggies or step through them at the right time! Sometimes it's important to keep distance.
+
+Travel Map Mode
+ - With LOTUS, you can fast-travel to another area in an instant!
+ - You can only reorder your BELLs on this screen. Go find a clue in the dungeon!
+ - Rearranging the BELLs correctly paves the way for the true ending!
+ - Some areas require a BELL to move around. You can determine the type of BELL by the pot material your residents are using!
+	</description>
+	
+	<history>Game Development History</history>
+	<histories>
+		<history>
+			<header>2020-10-28:</header>
+			<text>PROFESSIONAL / TRIAL version 1.0 released on Steam, DLC Complete Pack released at the same time</text>
+		</history>
+		<history>
+			<header>2020-09-26:</header>
+			<text>SPECIAL / PROFESSIONAL / TRIAL version 1.0 is now available on itch.io and booth.pm</text>
+		</history>
+		<history>
+			<header>2020-06-21: </header>
+			<text>TRIAL(PRE) version is available on itch.io</text>
+		</history>
+		<history>
+			<header>2020-02-17:</header>
+			<text>Participated in the Finally Finish Something 2020 JAM and won 4th place in the VISUALS category</text>
+		</history>
+		<history>
+			<header>2020-03-04:</header>
+			<text>Beta version 1.4 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2020-02-15:</header>
+			<text>Beta version 1.3 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2020-01-27:</header>
+			<text>βBeta version 1.2 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2019-12-25:</header>
+			<text>Beta version 1.0 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2019-10-29:</header>
+			<text>Alpha version 1.2 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2019-07-08:</header>
+			<text>Alpha version 1.0 is available on itch.io</text>
+		</history>
+		<history>
+			<header>2019-03-17:</header>
+			<text>Alpha version 0.2 is available at lexaloffle.com</text>
+		</history>
+		<history>
+			<header>2018-11-21:</header>
+			<text>Started learning game development, LUA language and API around PICO-8</text>
+		</history>
+	
+	</histories>
+	<features>
+		<feature>Metroidvania produced in a space of only 128KB (excluding the hardware part)</feature>
+		<feature>A clever game design that intertwines a cooking mode and a 3D dungeon mode with 2D action at its core</feature>
+		<feature>Find eight types of native veggies and "throw, hold up, and eat" them to achieve their respective effects, and use them like a puzzle to advance</feature>
+		<feature>veggies do not grow back for a while after being pulled out, so it is necessary to plan ahead</feature>
+		<feature>Go back and forth between 15 areas and 7 dungeons to return to the protagonist's nest, the final destination</feature>
+		<feature>Waking 48 inhabitants from their slumber, opening up 86 roads</feature>
+		<feature>Increased stats such as maximum life and jumping ability due to eating, making it easier to explore the area.</feature>
+		<feature>You get BELL by increasing the health value of the residents, and there are seven types</feature>
+		<feature>Collecting BELLs will open up your status limit and allow you to fast-travel to later areas(Required:LOTUS)</feature>
+		<feature>Additional veggies can be grown by increasing the health value of area residents</feature>
+		<feature>Rich animation of cute characters, including the fox protagonist Ruth</feature>
+		<feature>PICO-8's sleek, small, retro-themed graphics</feature>
+		<feature>A sound featuring the atmosphere of the 80s and early 90s</feature>
+		<feature>There are various enemy "viruses" that stand in the way, but there are no mighty bosses. similar to the gameplay of the NES Goonies 2</feature>
+	</features>
+	
+	<trailers>
+		<trailer>
+			<name>KONSAIRI - Official Trailer</name>
+			<youtube>rAWq0Q6wmhY</youtube>
+			<vimeo></vimeo>
+		</trailer>
+	</trailers>
+	
+	<awards>
+	</awards>
+	<quotes>
+		<quote>
+			<description>『コンサイリ』は1980年代後期のROM容量が増えたファミコンカセットに相当する!
+今までのpico8作品のイメージを超えた、新しい世界をあなたに体験させてくれるでしょう……</description>
+			<name>ドク子ちゃん @doc1oo</name>
+			<website>twitter</website>
+			<link>https://twitter.com/doc1oo/status/1310838824189087745</link>
+		</quote>
+		<quote>
+			<description>UI素敵すぎる！！
+ミニマム思考になりがちなPICO-8で、ここまで演出を重視できる素晴らしさよ…</description>
+			<name>uchuzine(ｶﾆ) @uchuzine</name>
+			<website>twitter</website>
+			<link>https://twitter.com/uchuzine/status/1295714859557019656</link>
+		</quote>
+		<quote>
+			<description>This is gorgeous! It's hard to believe this is a Pico-8 title with such large detailed sprites and animation. </description>
+			<name>Bright Moth Games</name>
+			<website>Finally Finish Something 2020 | itch.io</website>
+			<link>https://itch.io/post/1168427</link>
+		</quote>
+		<quote>
+			<description>This is great! Very solid pixel art, and the music is nice. You were able to do a lot with the palette and resolution, especially the subtle paralax scrolling in the first area</description>
+			<name>robert0504</name>
+			<website>Finally Finish Something 2020 | itch.io</website>
+			<link>https://itch.io/post/1165949</link>
+		</quote>
+	</quotes>
+	
+	<additionals>
+		<additional>
+			<title>Manual</title>
+			<description>pdf:</description>
+			<link>https://cdn.cloudflare.steamstatic.com/steam/apps/1448220/manuals/konsai_manual_en_t00.pdf?t=1603888973</link>
+		</additional>
+	</additionals>
+	<credits>
+		<credit>
+			<person>shiftalow</person>
+			<role>Programming, sound, 2D graphics, 3D modeling, level design, data engineering</role>
+		</credit>
+		<credit>
+			<person>nokoyama</person>
+			<role>Package Cover Art</role>
+		</credit>
+		<credit>
+			<person>lexaloffle.com</person>
+			<role>PICO-8 Fantasy Console, Game Engine</role>
+		</credit>
+	</credits>
+	<promote>
+			<award></award>
+			<review></review>
+	</promote>
+</game>

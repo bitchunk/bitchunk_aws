@@ -5,15 +5,18 @@ if( file_exists('install.php') )
 	header("Location: install.php");
 	exit;
 }
+/* init wards */
+$promoterawards = array();
+$promoterquotes = array();
+$press_request = FALSE;
+$url = "";
 
 $game = $_GET['p'];
-
 // Language logic
 
 include 'lang/TranslateTool.php';
 $language = TranslateTool::loadLanguage(isset($_GET['l']) ? $_GET['l'] : null, 'sheet.php');
 $languageQuery = ($language != TranslateTool::getDefaultLanguage() ? '?l='. $language : '');
-
 if (file_exists($game.'/data-'. $language .'.xml'))
 	$xml = simplexml_load_file($game.'/data-'. $language .'.xml');
 else if (file_exists($game.'/data.xml'))
@@ -307,6 +310,7 @@ else
 
 foreach( $xml->children() as $child )
 {
+
 	switch( $child->getName() )
 	{
 		case("title"):
@@ -357,7 +361,7 @@ echo '<!DOCTYPE html>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>'. COMPANY_TITLE .'</title>
-		<link href="http://cdnjs.cloudflare.com/ajax/libs/uikit/1.2.0/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/uikit/1.2.0/css/uikit.gradient.min.css" rel="stylesheet" type="text/css">
 		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 
@@ -468,9 +472,9 @@ echo'							</p>
 						</div>
 						<div class="uk-width-medium-4-6">
 							<h2 id="description">'. tl('Description'). '</h2>
-							<p>'. GAME_DESCRIPTION .'</p>
+							<p>'. nl2br(GAME_DESCRIPTION) .'</p>
 							<h2 id="history">'. tl('History'). '</h2>';
-
+/*
 for( $i = 0; $i < count($histories); $i++ )
 {
 	$header = $text ="";
@@ -478,25 +482,24 @@ for( $i = 0; $i < count($histories); $i++ )
 	foreach( $histories[$i]['history']->children() as $child )
 	{
 		if( $child->getName() == "header" ) $header = $child;
-		else if( $child->getName() == "text" ) $text = $child;
+		else if( $child->getName() == "text" ) $text = nl2br($child);
 	}
 	echo '<strong>'.$header.'</strong>
 <p>'.$text.'</p>';
 }
-
+*/
 if( defined("GAME_HISTORY") ) {
 	echo '<p>'. GAME_HISTORY .'</p>';
 }
 
 for( $i = 0; $i < count($histories); $i++ ) {
 	$header = $text ="";
-
 	foreach( $histories[$i]['history']->children() as $child )
 	{
 		if( $child->getName() == "header" ) {
 			$header = $child;
 		} else if( $child->getName() == "text" ) {
-			$text = $child;
+			$text = nl2br($child);
 		}
 	}
 	echo '<strong>'.$header.'</strong><p>'.$text.'</p>';
@@ -556,10 +559,10 @@ else
 			$result = "";
 
 			if( strlen( $youtube ) > 0 ) {
-				$result .= '<a href="http://www.youtube.com/watch?v='.$youtube.'">YouTube</a>, ';
+				$result .= '<a href="//www.youtube.com/watch?v='.$youtube.'">YouTube</a>, ';
 			}
 			if( strlen( $vimeo ) > 0 ) {
-				$result .= '<a href="http://www.vimeo.com/'.$vimeo.'">Vimeo</a>, ';
+				$result .= '<a href="//www.vimeo.com/'.$vimeo.'">Vimeo</a>, ';
 			}
 			if( strlen( $mov ) > 0 ) {
 				$result .= '<a href="'.$game.'/trailers/'.$mov.'">.mov</a>, ';
@@ -573,11 +576,11 @@ else
 			if( $ytfirst == 1 ) 
 			{
 				echo '<div class="uk-responsive-width iframe-container">
-		<iframe src="http://www.youtube.com/embed/'. $youtube .'" frameborder="0" allowfullscreen></iframe>
+		<iframe src="//www.youtube.com/embed/'. $youtube .'" frameborder="0" allowfullscreen></iframe>
 </div>';
 			} elseif ( $ytfirst == 0 ) {
 				echo '<div class="uk-responsive-width iframe-container">
-		<iframe src="http://player.vimeo.com/video/'.$vimeo.'" frameborder="0" allowfullscreen></iframe>
+		<iframe src="//player.vimeo.com/video/'.$vimeo.'" frameborder="0" allowfullscreen></iframe>
 </div>';
 			}
 			echo '</p>';
@@ -949,9 +952,9 @@ echo '						</div>
 			</div>
 		</div>
 
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>		
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>		
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.min.js"></script>
 		<script type="text/javascript">
 			$( document ).ready(function() {
 				var container = $(\'.images\');

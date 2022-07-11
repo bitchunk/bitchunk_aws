@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<game>
+	<title>KONSAIRI</title>
+	<release-date>30 January, 2017</release-date>
+	<website>https://bitchunk.net/</website>
+	<press-can-request-copy>TRUE</press-can-request-copy>
+
+	<platforms>
+		<platform>
+			<name>Steam</name>
+			<link>http://store.steampowered.com/app/1448220/</link>
+		</platform>
+	</platforms>
+	
+	<prices>
+		<price>
+			<currency>USD</currency>
+			<value>$10.99</value>
+		</price>
+		<price>
+			<currency>EUR</currency>
+			<value>€8,99</value>
+		</price>
+		<price>
+			<currency>JPY</currency>
+			<value>￥1,120</value>
+		</price>
+		<price>
+			<currency>CAD</currency>
+			<value>CDN$12.49</value>
+		</price>				
+		<price>
+			<currency>GBP</currency>
+			<value>£8.29</value>
+		</price>
+	</prices>
+
+	<description>
+KONSAIRIはわずか128KBで作られたPICO-8仕様の2Dアクションアドベンチャーゲームです。
+根菜を見つけて、掲げる（コンサイリキ）・食べる・投げるなど駆使して先に進め！
+PICO-8仕様の小さくかわいいドット絵で、大きな世界を冒険しよう！
+
+ //// 
+KONSAIRI is a 2D action-adventure game with PICO-8 specifications made in only 128KB.
+Find a root vegetable, hold it up (KONPSI), eat it, throw it, etc., and move on!
+Adventure in a big world with PICO-8 specs and cute little dots!
+	</description>
+	
+	<histories>
+		<history>
+			<header>2020-10-28:</header>
+			<text> PROFESSIONAL / TRIAL バージョン1.0をSteamにてリリース、DLC Complete Packも同時リリース
+			
+			PROFESSIONAL / TRIAL version 1.0 released on Steam, DLC Complete Pack released at the same time</text>
+			
+		</history>
+		<history>
+			<header>2020-09-26:</header>
+			<text>SPECIAL / PROFESSIONAL / TRIAL バージョン1.0をitch.io、booth.pmにてリリース
+			
+			SPECIAL / PROFESSIONAL / TRIAL version 1.0 is now available on itch.io and booth.pm
+			</text>
+		</history>
+		<history>
+		<header>2020-06-21: </header>
+		<text>TRIAL(PRE)バージョンをitch.ioにて公開
+		
+		TRIAL(PRE) version is available on itch.io
+		</text>
+		</history>
+		<history>
+			<header>2020-02-17:</header>
+			<text>Finally Finish Something 2020 JAMに参加 VISUALS部門で4位を獲得</text>
+		</history>
+		<history>
+		<header>2020-03-04:</header>
+			<text>βバージョン1.4をitch.ioにて公開
+			
+			Beta version 1.4 is available on itch.io</text>
+
+		</history>
+		<history>
+		<header>2020-02-15:</header>
+			<text>βバージョン1.3をitch.ioにて公開
+			
+			Beta version 1.3 is available on itch.io</text>
+		</history>
+		<history>
+		<header>2020-01-27:</header>
+			<text>βバージョン1.2をitch.ioにて公開
+			
+			Beta version 1.2 is available on itch.io</text>
+		</history>
+		<history>
+		<header>2019-12-25:</header>
+			<text>βバージョン1.0をitch.ioにて公開
+			
+			Beta version 1.0 is available on itch.io</text>
+		</history>
+		<history>
+		<header>2019-10-29:</header>
+			<text>αバージョン1.2をitch.ioにて公開
+			
+			Alpha version 1.2 is available on itch.io</text>
+		</history>
+		<history>
+		<header>2019-07-08:</header>
+			<text>αバージョン1.0をitch.ioにて公開
+			
+			Alpha version 1.0 is available on itch.io</text>
+		</history>
+		<history>
+		<header>2019-03-17:</header>
+			<text>αバージョン0.2をlexaloffle.comにて公開
+			
+			Alpha version 0.2 is available at lexaloffle.com</text>
+		</history>
+		<history>
+		<header>2018-11-21:</header>
+			<text>PICO-8にてゲーム開発・LUA言語・API周りの習得を開始
+			
+			Started learning game development, LUA language and API around PICO-8</text>
+		</history>
+	
+	</histories>
+	<features>
+		<feature>わずか128KB（ハードウェア的部分を除く）の容量で制作されたメトロイドヴァニア</feature>
+		<feature>2Dアクションを主軸に調理モードと3Dダンジョンモードを絡めた巧妙なゲームデザイン</feature>
+		<feature>8種類の自生している根菜を見つけ、「投げる・掲げる・食べる」ことでそれぞれの効果を発揮、パズルのように使い分けて進む</feature>
+		<feature>根菜は引き抜くとしばらく生えてこないため、計画的にすすめる必要がある</feature>
+		<feature>15のエリアと7つのダンジョンを行き来して最終目的地である主人公の巣へ帰還する</feature>
+		<feature>48体の住民を眠りから覚まし、88の道を開放</feature>
+		<feature>食事をするとライフ値が回復し、主人公の最大ライフやジャンプ力などのステータスがアップする</feature>
+		<feature>住民の健康値を高めることでBELLを入手、7種類存在する</feature>
+		<feature>BELLを集めることでステータスの上限が開放されたり、後半のエリアへのファストトラベルが可能になる(要:LOTUS)</feature>
+		<feature>エリア内住民の健康値を高めることで根菜を追加で栽培できる</feature>
+		<feature>BELLとヒントを集めて正しく並べることで真のエンディングの道が開かれる</feature>
+		<feature>きつねの主人公ルースを始めとする、かわいらしいキャラクターの豊富なアニメーション</feature>
+		<feature>PICO-8の洗練された小さくレトロなテーマによるグラフィック</feature>
+		<feature>80年代から90年代前半の雰囲気をフィーチャーしたサウンド</feature>
+		<feature>行く手を阻む敵、様々な「ウイルス」がいるが、強大なボスが存在しない、ファミコンのGoonies2のゲーム性に近い</feature>
+		<feature></feature>
+		<feature>Metroidvania produced in a space of only 128KB (excluding the hardware part)</feature>
+		<feature>A clever game design that intertwines a cooking mode and a 3D dungeon mode with 2D action at its core</feature>
+		<feature>Find eight types of native root vegetables and "throw, hold up, and eat" them to achieve their respective effects, and use them like a puzzle to advance</feature>
+		<feature>Root vegetables do not grow back for a while after being pulled out, so it is necessary to plan ahead</feature>
+		<feature>Go back and forth between 15 areas and 7 dungeons to return to the protagonist's nest, the final destination</feature>
+		<feature>Waking 48 inhabitants from their slumber, opening up 88 roads</feature>
+		<feature>When you eat, your life value is restored and the main character's stats, such as maximum life and jump power, are increased</feature>
+		<feature>You get BELL by increasing the health value of the residents, and there are seven types</feature>
+		<feature>Collecting BELLs will open up your status limit and allow you to fast-travel to later areas(Required:LOTUS)</feature>
+		<feature>Additional root vegetables can be grown by increasing the health value of area residents</feature>
+		<feature>Collecting BELLs and clues and lining them up correctly will pave the way for the true ending</feature>
+		<feature>Rich animation of cute characters, including the fox protagonist Ruth</feature>
+		<feature>PICO-8's sleek, small, retro-themed graphics</feature>
+		<feature>A sound featuring the atmosphere of the 80s and early 90s</feature>
+		<feature>Enemies to block your path, various "viruses", but no mighty bosses, similar to the gameplay of the NES Goonies 2</feature>
+	</features>
+	
+	<trailers>
+		<trailer>
+			<name>KONSAIRI - Official Trailer</name>
+			<youtube>rAWq0Q6wmhY</youtube>
+			<vimeo></vimeo>
+		</trailer>
+	</trailers>
+	
+	<awards>
+	</awards>
+	<quotes>
+		<quote>
+			<description>『コンサイリ』は1980年代後期のROM容量が増えたファミコンカセットに相当する!
+今までのpico8作品のイメージを超えた、新しい世界をあなたに体験させてくれるでしょう……</description>
+			<name>ドク子ちゃん @doc1oo</name>
+			<website>twitter</website>
+			<link>https://twitter.com/doc1oo/status/1310838824189087745</link>
+		</quote>
+		<quote>
+			<description>UI素敵すぎる！！
+ミニマム思考になりがちなPICO-8で、ここまで演出を重視できる素晴らしさよ…</description>
+			<name>uchuzine(ｶﾆ) @uchuzine</name>
+			<website>twitter</website>
+			<link>https://twitter.com/uchuzine/status/1295714859557019656</link>
+		</quote>
+		<quote>
+			<description>This is gorgeous! It's hard to believe this is a Pico-8 title with such large detailed sprites and animation. </description>
+			<name>Bright Moth Games</name>
+			<website>Finally Finish Something 2020 | itch.io</website>
+			<link>https://itch.io/post/1168427</link>
+		</quote>
+		<quote>
+			<description>This is great! Very solid pixel art, and the music is nice. You were able to do a lot with the palette and resolution, especially the subtle paralax scrolling in the first area</description>
+			<name>robert0504</name>
+			<website>Finally Finish Something 2020 | itch.io</website>
+			<link>https://itch.io/post/1165949</link>
+		</quote>
+	</quotes>
+	
+	<additionals>
+	</additionals>
+	<credits>
+		<credit>
+			<person>しふたろう</person>
+			<role>プログラム、サウンド、2Dグラフィック、3Dモデリング、レベルデザイン、データエンジニア</role>
+		</credit>
+		<credit>
+			<person>nokoyama</person>
+			<role>パッケージカバーアート</role>
+		</credit>
+		<credit>
+			<person>lexaloffle.com</person>
+			<role>PICO-8 Fantasy Console, Game Engine</role>
+		</credit>
+	</credits>
+	<promote>
+			<award></award>
+			<review></review>
+	</promote>
+</game>

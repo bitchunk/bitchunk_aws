@@ -5,12 +5,29 @@
 	</section>
 	<section>
 		<article>
-			<h3><a href="https://shiftal-on.booth.pm/items/1274787" >「KONSAIRI」 製品版（BOOTHで購入）</a></h3>
-			<h3><a href="https://bitchunk.itch.io/konsairi" >「KONSAIRI」 製品版（itch.ioで購入）</a></h3>
-			<p>キツネの仔が主人公！根菜を使って進め！</p>
-			<p>体験版はブラウザでプレイ可能です。</p>
-			<p><a href="/app/konsairi/" >「KONSAIRI」 体験版</a></p>
-			<p class="text_center"><img src="/img/applist/konsairi_03.gif" /><img src="/img/applist/konsairi_02.jpg" /></p>
+			<h3 id="konsairi"><a href="https://store.steampowered.com/app/1448220" target="_blank">根菜きつねの冒険「KONSAIRI」 製品版（Steamで購入）</a></h3>
+			<p class="text_center"><img src="/img/applist/konsairi_04.gif" /><img src="/img/applist/konsairi_02.jpg" /></p>
+			<p>★きつねの仔「ルース」が主人公！根菜の力「コンサイリキ」を使って進め！</p>
+			<p>★<span class="red" style="color: red; font-weight:bold;">赤い根菜</span>を手に持ったら、眠っている住人をコンサイリキで目覚めさせよう！</p>
+			<p>★集めた根菜を住人と一緒に料理を食べよう！</p>
+			<p>★行く手を阻むウイルスを根菜を投げて取り除こう！</p>
+			<p>★島を巡ってBELLを獲得してみよう！目指すは、おぼろげな記憶にある自分の住処・・・！</p>
+			<p><a href="https://store.steampowered.com/app/1448220" target="_blank">「KONSAIRI」 製品版（Steam）</a></p>
+			<p><a href="/app/konsairi/" target="_blank" >「KONSAIRI」 ブラウザ体験版</a></p>
+			<p><a href="https://cdn.cloudflare.steamstatic.com/steam/apps/1448220/manuals/KONSAIRI_MANUAL_JPrev2.pdf?t=1656845193" target="_blank" >マニュアルをお読みください！</a></p>
+		</article>
+	</section>
+	<section>
+		<article>
+			<h3><a href="https://bitchunk.itch.io/pelogen" target="_blank" >ローレゾローポリモデリング「PELOGEN」 （itch.ioで無料配信）</a></h3>
+			<p class="text_center"><img src="/img/applist/pelogen_01.gif" /><img src="/img/applist/pelogen_02.gif" /></p>
+			<p>★PICO-8で実用するための3Dモデリングツール</p>
+			<p>★フラットフェーディングのON・OFF</p>
+			<p>★スプライトシートへ書き出し対応</p>
+			<p>★レンダリングサンプルコード書き出し対応</p>
+			<p>（ブラウザ版より<strong>DL版</strong>をおすすめします。）</p>
+			<p><a href="https://bitchunk.itch.io/pelogen" target="_blank" >「PELOGEN」（itch.io）</a></p>
+			<p><a href="https://docs.google.com/spreadsheets/d/1BlpN39me-ndc_TtKGzQqD-C15_uzNaJlBnmwcKOoymY/edit?usp=sharing" target="_blank" >マニュアルをお読みください！</a></p>
 		</article>
 	</section>
 	<section>

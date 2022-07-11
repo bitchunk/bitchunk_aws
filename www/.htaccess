@@ -1,8 +1,8 @@
 IndexIgnore *
-Options -Indexes +FollowSymLinks
+Options -Indexes
 AddHandler cgi-script htaccess 
 
-<Files ~ "\.(html|php|js|png|css)$">
+<Files ~ "\.(html|php|js|png|jpg|css)$">
 	Header add Pragma "no-cache"
 	Header set Cache-Control no-cache
 </Files>
@@ -21,8 +21,8 @@ AddHandler cgi-script htaccess
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{HTTPS} on
-RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+#RewriteCond %{HTTPS} on
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
 #FontFiles Rewrite
 RewriteCond %{REQUEST_URI} \.ttf$

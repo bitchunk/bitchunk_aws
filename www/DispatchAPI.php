@@ -4,7 +4,6 @@ require_once ('./properties/common.php');
 
 if(!defined('BLOG_HOST')){
 	header("location: ". PROTOCOL_HOST);
-
 }
 
 class DispatchAPI {
@@ -47,7 +46,6 @@ class DispatchAPI {
 		if($this->defaultView($name)){
 			exit;
 		}
-
 		$module['module'] = trim($module['module'], '/');
 
 		$this->moduleView($module);
@@ -142,7 +140,12 @@ class DispatchAPI {
 			require_once ($dpath. '/index.php');
 		}else if (file_exists($dpath)){
 			chdir(dirname($dpath));
-			require_once ($dpath);
+			if(preg_match('/\.+(gif|jpg|jpeg|png|webp)$/', $dpath, $match)){
+				header("Content-Type: image/". $match[1]);
+				echo file_get_contents(basename($dpath));
+			}else{
+				require_once (basename($dpath));
+			}
 		}else{
 			return false;
 //			require_once (VIEW_PATH. 'notfound.php');

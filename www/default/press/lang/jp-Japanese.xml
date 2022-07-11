@@ -4,59 +4,59 @@
 	<set>
 		<translation>
 			<base>Language: </base>
-			<local>Language: </local>
+			<local>言語: </local>
 		</translation>
 		<translation>
 			<base>Factsheet</base>
-			<local>Factsheet</local>
+			<local>概況報告</local>
 		</translation>
 		<translation>
 			<base>Description</base>
-			<local>Description</local>
+			<local>説明</local>
 		</translation>
 		<translation>
 			<base>History</base>
-			<local>History</local>
+			<local>履歴</local>
 		</translation>
 		<translation>
 			<base>Projects</base>
-			<local>Projects</local>
+			<local>プロジェクト</local>
 		</translation>
 		<translation>
 			<base>Videos</base>
-			<local>Videos</local>
+			<local>動画</local>
 		</translation>
 		<translation>
 			<base>Images</base>
-			<local>Images</local>
+			<local>画像</local>
 		</translation>
 		<translation>
 			<base>Logo &amp; Icon</base>
-			<local>Logo &amp; Icon</local>
+			<local>ロゴ &amp; アイコン</local>
 		</translation>
 		<translation>
 			<base>Awards &amp; Recognition</base>
-			<local>Awards &amp; Recognition</local>
+			<local>実績 &amp; 認知</local>
 		</translation>
 		<translation>
 			<base>Selected Articles</base>
-			<local>Selected Articles</local>
+			<local>紹介記事</local>
 		</translation>
 		<translation>
 			<base>Additional Links</base>
-			<local>Additional Links</local>
+			<local>関連リンク</local>
 		</translation>
 		<translation>
 			<base>Team</base>
-			<local>Team</local>
+			<local>制作チーム</local>
 		</translation>
 		<translation>
 			<base>Contact</base>
-			<local>Contact</local>
+			<local>コンタクト</local>
 		</translation>
 		<translation>
 			<base>Developer:</base>
-			<local>Developer:</local>
+			<local>開発者:</local>
 		</translation>
 		<translation>
 			<base>Based in %s</base>
@@ -68,7 +68,7 @@
 		</translation>
 		<translation>
 			<base>Website:</base>
-			<local>Website:</local>
+			<local>ウェブサイト:</local>
 		</translation>
 		<translation>
 			<base>Press / Business Contact:</base>
@@ -112,7 +112,7 @@
 		</translation>
 		<translation>
 			<base>Contact</base>
-			<local>Contact</local>
+			<local>コンタクト</local>
 		</translation>
 	</set>
 	<!-- Set for additional texts used in 'sheet.php', the '_template/index.php' file --> 
@@ -127,23 +127,23 @@
 		</translation>
 		<translation>
 			<base>About %s</base>
-			<local>About %s</local>
+			<local>%s について</local>
 		</translation>
 		<translation>
 			<base>Release date:</base>
-			<local>Release date:</local>
+			<local>リリース日:</local>
 		</translation>
 		<translation>
 			<base>Platforms:</base>
-			<local>Platforms:</local>
+			<local>プラットフォーム:</local>
 		</translation>
 		<translation>
 			<base>Regular Price:</base>
-			<local>Regular Price:</local>
+			<local>通常価格:</local>
 		</translation>
 		<translation>
 			<base>Features</base>
-			<local>Features</local>
+			<local>特徴</local>
 		</translation>
 		<translation>
 			<base>download all screenshots &amp; photos as .zip (%s)</base>
@@ -199,11 +199,11 @@
 		</translation>		
 		<translation>
 			<base>Boilerplate</base>
-			<local>Boilerplate</local>
+			<local>企業概要</local>
 		</translation>
 		<translation>
 			<base>More information</base>
-			<local>More information</local>
+			<local>詳細情報</local>
 		</translation>
 		<translation>
 			<base><![CDATA[More information on %s, our logo & relevant media are available <a href="%s">here</a>.]]></base>

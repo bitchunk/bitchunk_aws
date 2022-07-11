@@ -39,6 +39,10 @@
 			<header>PITMAP</header>
 			<text>対戦ブラウザボードゲーム</text>
 		</history>
+		<history>
+			<header>KONSAIRI</header>
+			<text>PICO-8 128KBの2Dアクション・アドベンチャーゲーム</text>
+		</history>
 	</histories>
 		
 	<trailers>
@@ -80,4 +84,5 @@
 			<link>http://bitchunk.net</link>
 		</contact>
 	</contacts>
+	<analytics>UA-46774451-6</analytics>
 </game>

@@ -113,7 +113,8 @@ section img{
 section{
 	background-color:white;
 	margin:0.8rem 0;
-	padding:0.8rem;
+	padding:1.28rem 0.8rem;
+	/* padding:0.8rem1 */
 }
 
 hr{
@@ -138,6 +139,7 @@ hr{
 	section img{
 		width: 90%;
 		height: auto;
+		margin: 0.8rem auto;
 	}
 	.resp_nl{
 		display:block;
@@ -269,7 +271,7 @@ nav .head-layer{
 		/*display: none;*/
 		display: inline-block;
 	}
-	
+
 	.scrollable{
 		height: 64px;
 		overflow-x: scroll;
@@ -299,7 +301,7 @@ nav .menu button{
 	vertical-align: top;
 	font-size: 0;
 	background-color: black;
-	
+
 }
 
 nav .menu button:hover{
@@ -355,8 +357,8 @@ ul.breadcrumb{
 	background-image: url('/img/common/bg_check_shadow.png');
 	background-size: 64px 64px;
 	background-repeat: repeat;
-	background-attachment: fixed; 
-	background-position: 0 32px; 
+	background-attachment: fixed;
+	background-position: 0 32px;
 
 	height: 32px;
 	padding:0 0.5rem;
@@ -404,7 +406,7 @@ ul.breadcrumb span{
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	
+
 }
 
 #container::before{
@@ -449,7 +451,8 @@ contents{
 	top: 0;
 	background-color:#FCE0A8;
 	color: #881400;
-	padding: 0.8rem;
+	/* padding: 0.8rem; */
+	padding:1.28rem 0.8rem;
 	margin:0;
 	width: auto;
 	max-width:inherit;
@@ -465,8 +468,8 @@ contents{
 	background-image:url('/img/common/bg_check_shadow.png');
 	background-size: 64px 64px;
 	background-repeat: repeat;
-	background-attachment: fixed; 
-	background-position: 0 32px; 
+	background-attachment: fixed;
+	background-position: 0 32px;
 }
 .contents section article{
 	border-image:url('/img/common/section_chunk.png') 8 round;
@@ -504,7 +507,7 @@ contents{
 		margin:0.2rem;
 		display:block;
 	}
-	
+
 	.contents section article img{
 		width: 100%;
 	}
@@ -520,7 +523,7 @@ footer{
 	margin:0;
 	padding:0;
 	position:absolute;
-	bottom:0px;	
+	bottom:0px;
 	height: 64px;
 }
 footer:before{
@@ -531,8 +534,8 @@ footer:before{
 	background-image:url('/img/common/bg_check_shadow.png');
 	background-size: 64px 64px;
 	background-repeat: repeat;
-	background-attachment: fixed; 
-	background-position: 0 32px; 
+	background-attachment: fixed;
+	background-position: 0 32px;
 
 }
 
@@ -565,7 +568,7 @@ footer .foot-layer p{
 	padding:0;
 	vertical-align:middle;
 	line-height: 1rem;
-	
+
 }
 
 footer span{
@@ -608,12 +611,8 @@ footer span.copyright{
 }
 @media screen and (max-width:640px){
 	#display {
-/*		width:168px;
-		height:32px;*/
 	}
 	#display img{
-/*		width:168px;
-		height:32px;*/
 		width: 16rem;
 		height: auto;
 	}
@@ -630,4 +629,3 @@ footer span.copyright{
 	top: -128px;
 	bottom:700px;
 }
-
