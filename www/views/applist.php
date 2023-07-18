@@ -5,6 +5,34 @@
 	</section>
 	<section>
 		<article>
+			<h3 id="mu-scalelab"><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">【PICO-8】仮想ピアノ＆スケール参照「μ-Scale Lab」（BOOTH / itch.ioで配信）</a></h3>
+			<p class="text_center"><img src="/img/applist/mu-scalelab_01.gif" /><img src="/img/applist/mu-scalelab_02.gif" /></p>
+			<p>★小さな仮想ピアノソフト！</p>
+			<p>★スケールの参照と、スケールに合わせた鍵盤のサポート</p>
+			<p>★新しいスケールの追加・保存機能（製品版のみ）</p>
+			<p>★簡易チュートリアル付き（画面右上をクリックして開始します）</p>
+			<p><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">「μ-Scale Lab」 製品版・体験版（BOOTH）</a></p>
+			<p><a href="https://bitchunk.itch.io/mu-scalelab" target="_blank">「μ-Scale Lab」 製品版・体験版（itch.io）</a></p>
+		</article>
+	</section>
+	<section>
+		<article>
+			<h3 id="spranimkit"><a href="https://shiftal-on.booth.pm/items/4527020" target="_blank">PICO-8用アニメーションツール「SPRANIM-KIT」（BOOTH / itch.ioで配信）</a></h3>
+			<p class="text_center"><img src="/img/applist/spranimkit_01.gif" /><img src="/img/applist/spranimkit_02.gif" /></p>
+			<p>★小さな画面（低解像度）でアニメーション制作！</p>
+			<p>★GIF動画撮影</p>
+			<p>★フレーム分割撮影（外部ソフト編集用出力）</p>
+			<p>★パーツごとにフレーム設定可能</p>
+			<p>★サンプルアニメーションデータ付属</p>
+			<p>★PICO-8用の小さなアニメーションデータをMAPデータへ収納</p>
+			<p>★PICO-8用アニメーション再生コード付属</p>
+			<p><a href="https://shiftal-on.booth.pm/items/4527020" target="_blank">「SPRANIM-KIT」 製品版・体験版（BOOTH）</a></p>
+			<p><a href="https://bitchunk.itch.io/spranim-kit" target="_blank">「SPRANIM-KIT」 製品版・体験版（itch.io）</a></p>
+			<p><a href="/app/spranimkit/SPRANIM-KIT_Manual_JP_v0_20.pdf" target="_blank" >マニュアルをお読みください！</a></p>
+		</article>
+	</section>
+	<section>
+		<article>
 			<h3 id="konsairi"><a href="https://store.steampowered.com/app/1448220" target="_blank">根菜きつねの冒険「KONSAIRI」 製品版（Steamで購入）</a></h3>
 			<p class="text_center"><img src="/img/applist/konsairi_04.gif" /><img src="/img/applist/konsairi_02.jpg" /></p>
 			<p>★きつねの仔「ルース」が主人公！根菜の力「コンサイリキ」を使って進め！</p>

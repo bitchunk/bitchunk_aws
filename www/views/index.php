@@ -4,7 +4,23 @@
 	<section class="news">
 		<article>
 			<h2>おしらせ</h2>
-			<h3 style="text-align:center; color:crimson"><a href="/applist#konsairi"><strong>根菜！きつね！<br />KONSAIRIリリース！！</strong></a></h3>
+			<h3 style="text-align:center; color:crimson">
+				<a href="/applist#spranimkit" style="">
+					【PICO-8】仮想ピアノ・スケール参照ソフト<br />
+					μ-ScaleLabをリリース！！
+				</a>
+			</h3>
+			<p style="text-align: center;"><img src="/img/applist/mu-scalelab_01.gif" style="height:10rem; width:auto;" /></p>
+			<hr>
+			<h3 style="text-align:center; color:crimson">
+				<a href="/applist#spranimkit" style="">
+					PICO-8用アニメーションツール<br />
+					SPRANIM-KITをリリース！！
+				</a>
+			</h3>
+			<p style="text-align: center;"><img src="/img/applist/spranimkit_01.gif" style="height:10rem; width:auto;" /></p>
+			<hr>
+			<h3 style="text-align:center; color:crimson"><a href="/applist#konsairi"><strong>根菜！きつね！<br />KONSAIRI公開中！</strong></a></h3>
 			<p style="text-align: center;"><img src="/img/applist/konsairi_02.jpg" style="height:10rem; width:auto;" /></p>
 			<hr>
 			<h3 style="text-align:center; color:crimson"><strong>2Dアクションゲーム(Platformer)<br />KONSAIRIを無料公開中（β版）</strong></h3>
@@ -18,7 +34,7 @@
 				<p style="text-align: center;"><img src="/img/applist/pitmap_02.jpg" style="height:10rem; width:auto;" /></p>
 				<p style="text-align: center;">フィールドに隠されたカプセルを見つけよう！</p>
 			</a>
-			<hr/>
+			<hr>
 			<?php $log = self::siteUpdatesLog(); ?>
 			<?php foreach($log as $row): ?>
 			<p><span class="date"><?php echo $row['date']; ?></span><?php echo $row['text']; ?></p>
