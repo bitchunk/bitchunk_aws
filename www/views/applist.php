@@ -5,6 +5,22 @@
 	</section>
 	<section>
 		<article>
+			<h3 id="mu-scalelab"><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">【PICO-8】コンパクト3Dモデリングソフト「PELOGEN2」（BOOTH / itch.ioで配信）</a></h3>
+			<p class="text_center"><img src="/img/applist/pelogen2_01.gif" /><img src="/img/applist/pelogen2_02.gif" /></p>
+			<p>★コンパクト3Dモデリングソフトが更にパワーアップ！</p>
+			<p>★前バージョンのモデルデータの基礎から再設計！</p>
+			<p>★座標解像度を31x31x31に拡大し、表現力が向上</p>
+			<p>★プリセットモデルを追加しながら編集</p>
+			<p>★頂点の結合機能</p>
+			<p>★面の複製機能</p>
+			<p>★選択頂点の回転機能（角度限定）</p>
+			<p>★データ管理・書き出し読み込み（有料版）</p>
+			<p><a href="https://shiftal-on.booth.pm/items/5515245" target="_blank">「PELOGEN2」 製品版・体験版（BOOTH）</a></p>
+			<p><a href="https://bitchunk.itch.io/pelogen2" target="_blank">「PELOGEN2」 製品版・体験版（itch.io）</a></p>
+		</article>
+	</section>
+	<section>
+		<article>
 			<h3 id="mu-scalelab"><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">【PICO-8】仮想ピアノ＆スケール参照「μ-Scale Lab」（BOOTH / itch.ioで配信）</a></h3>
 			<p class="text_center"><img src="/img/applist/mu-scalelab_01.gif" /><img src="/img/applist/mu-scalelab_02.gif" /></p>
 			<p>★小さな仮想ピアノソフト！</p>

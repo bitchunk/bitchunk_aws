@@ -5,6 +5,18 @@
 		<article>
 			<h2>おしらせ</h2>
 			<h3 style="text-align:center; color:crimson">
+				<a href="/applist#pelogen2" style="">
+					【PICO-8】コンパクト3Dモデリングソフト<br />
+					PELOGEN2をリリース！！
+				</a>
+			</h3>
+			<a href="https://blog.bitchunk.net/tag/pelogen/" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><img src="/img/applist/pelogen2_02.gif" style="height:10rem; width:auto;" /></p>
+				<p style="text-align: center;">ローレゾローポリモデリング「PELOGEN」がパワーアップ！</p>
+				<p style="text-align: center;">操作をblenderに寄せつつ、座標解像度を31x31x31に拡大など</p>
+			</a>
+			<hr>
+			<h3 style="text-align:center; color:crimson">
 				<a href="/applist#spranimkit" style="">
 					【PICO-8】仮想ピアノ・スケール参照ソフト<br />
 					μ-ScaleLabをリリース！！
