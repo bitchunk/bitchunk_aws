@@ -5,7 +5,22 @@
 	</section>
 	<section>
 		<article>
-			<h3 id="mu-scalelab"><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">【PICO-8】コンパクト3Dモデリングソフト「PELOGEN2」（BOOTH / itch.ioで配信）</a></h3>
+			<h3 id="minimemtracker"><a href="https://shiftal-on.booth.pm/items/6156459" target="_blank">【PICO-8】切り抜きトラックシーケンサー「MinimemTracker」（BOOTH / itch.ioで配信）</a></h3>
+			<p class="text_center"><img src="/img/applist/minimemtracker_01.gif" /><img src="/img/applist/minimemtracker_02.gif" /></p>
+			<p>★切り抜いて演奏！コンパクトでエコなデータ設計</p>
+			<p>★6ch同時演奏！</p>
+			<p>★波形は16種類！（矩形波・三角波・鋸波・短周期／長周期ノイズなど）</p>
+			<p>★エフェクトは波形切り替え・エンベロープ・ピッチベンド・アルペジオ</p>
+			<p>★各チャンネルに4つの可変長トラック</p>
+			<p>★データ管理・書き出し読み込み</p>
+			<p>★現在無料です！</p>
+			<p><a href="https://shiftal-on.booth.pm/items/6156459" target="_blank">「MinimemTracker」（BOOTH）</a></p>
+			<p><a href="https://bitchunk.itch.io/minimemtracker" target="_blank">「MinimemTracker」（itch.io）</a></p>
+		</article>
+	</section>
+	<section>
+		<article>
+			<h3 id="pelogen2"><a href="https://shiftal-on.booth.pm/items/4835542" target="_blank">【PICO-8】コンパクト3Dモデリングソフト「PELOGEN2」（BOOTH / itch.ioで配信）</a></h3>
 			<p class="text_center"><img src="/img/applist/pelogen2_01.gif" /><img src="/img/applist/pelogen2_02.gif" /></p>
 			<p>★コンパクト3Dモデリングソフトが更にパワーアップ！</p>
 			<p>★前バージョンのモデルデータの基礎から再設計！</p>

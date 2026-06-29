@@ -5,6 +5,17 @@
 		<article>
 			<h2>おしらせ</h2>
 			<h3 style="text-align:center; color:crimson">
+				<a href="/applist#minimemtracker" style="">
+					【PICO-8】切り抜きトラックシーケンサー<br />
+					MinimemTrackerをリリース！！
+				</a>
+			</h3>
+			<a href="https://blog.bitchunk.net/tag/pelogen/" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
+				<p style="text-align: center;"><img src="/img/applist/minimemtracker_01.gif" style="height:10rem; width:auto;" /></p>
+				<p style="text-align: center;">♫ノートを切り抜いて！エフェクトを切り抜いて！レトロな音源で演奏！</p>
+			</a>
+			<hr>
+			<h3 style="text-align:center; color:crimson">
 				<a href="/applist#pelogen2" style="">
 					【PICO-8】コンパクト3Dモデリングソフト<br />
 					PELOGEN2をリリース！！
@@ -35,7 +46,7 @@
 			<h3 style="text-align:center; color:crimson"><a href="/applist#konsairi"><strong>根菜！きつね！<br />KONSAIRI公開中！</strong></a></h3>
 			<p style="text-align: center;"><img src="/img/applist/konsairi_02.jpg" style="height:10rem; width:auto;" /></p>
 			<hr>
-			<h3 style="text-align:center; color:crimson"><strong>2Dアクションゲーム(Platformer)<br />KONSAIRIを無料公開中（β版）</strong></h3>
+			<!-- <h3 style="text-align:center; color:crimson"><strong>2Dアクションゲーム(Platformer)<br />KONSAIRIを無料公開中（β版）</strong></h3>
 			<a href="https://bitchunk.itch.io/konsairi" style="text-align:center; color:crimson; vertical-align: top; overflow:hidden;">
 				<p style="text-align: center;"><img src="/img/applist/konsairi_01.gif" style="height:10rem; width:auto;" /></p>
 				<p style="text-align: center;"><strong>きつね</strong>の仔が主人公！<strong>根菜</strong>を採りながら冒険！！</p>
@@ -46,7 +57,7 @@
 				<p style="text-align: center;"><img src="/img/applist/pitmap_02.jpg" style="height:10rem; width:auto;" /></p>
 				<p style="text-align: center;">フィールドに隠されたカプセルを見つけよう！</p>
 			</a>
-			<hr>
+			<hr> -->
 			<?php $log = self::siteUpdatesLog(); ?>
 			<?php foreach($log as $row): ?>
 			<p><span class="date"><?php echo $row['date']; ?></span><?php echo $row['text']; ?></p>
