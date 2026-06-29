@@ -38,21 +38,21 @@ define("SESSION_NAME_COMMON", 'BITCHUNK');
 define("PICTURE_IGNORE_FILES_PATH", PICT_PATH. "ignores.csv");
 
 
-define("HOST_LOCAL", "localhost:58106");
-define("HOST_BETA", "bitchunk.fam.cx");
-define("HOST_PRODUCTION", "bitchunk.net");
+define("HOST_LOCAL", ["localhost:58106", "10.0.1.16:58106"]);
+define("HOST_BETA", ["bitchunk.fam.cx"]);
+define("HOST_PRODUCTION", ["bitchunk.net"]);
 
 $svh = $_SERVER['HTTP_HOST'];
 define("HOST_NAME", $svh);
 define("PROTOCOL", 'http' . (@$_SERVER['HTTPS'] == 'on' ? 's' : '') . "://");
-
-if(strstr($svh, HOST_PRODUCTION) != false){
+// if(strstr($svh, HOST_PRODUCTION) != false){
+if(in_array($svh, HOST_PRODUCTION)){
 	define('BLOG_HOST', PROTOCOL. 'blog.' .HOST_NAME. '/');
-}else if($svh == HOST_BETA){
+}else if(in_array($svh, HOST_BETA)){
 	ini_set('display_errors', 1);
-}else if($svh == HOST_LOCAL){
+}else if(in_array($svh, HOST_LOCAL)){
 	ini_set('display_errors', 1);
-	define('BLOG_HOST', PROTOCOL. 'localhost:58107'. '/');
+	define('BLOG_HOST', PROTOCOL. substr($svh, 0, -1) . '7/');
 }
 
 define('PROTOCOL_HOST', PROTOCOL. HOST_NAME. '/');
