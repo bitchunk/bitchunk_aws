@@ -23,31 +23,41 @@ class DispatchAPI {
 	static $pagekeywords = SITE_KEYWORDS;
 
 	function dispatch() {
-		$uri = $_SERVER['REQUEST_URI'];
-		$get = $_GET;
+		$uri = $_SERVER['REQUEST_URI']; //パスを取得
+		$get = $_GET; //getパラメータを取得
 
 		if (!empty($uri)) {
+			// パスが有効
+			// パスを分析
 			$info = parse_url($uri);
 			$name = @$info['path'];
 			$query = @$info['query'];
 
+			// パス情報を取得
 			$info = pathinfo($name);
 
+			// '/app/'付きパスであれば、ファイル名を抽出
 			$name = str_replace(self::$ROOT_PATH, '', $name);
 		} else {
+			// パスが無効
 			$query = "";
 		}
+
+		// ファイル名は'index'を参照する（ディレクトリ直下 or TOP）
 		if ($name == '/' || empty($name)) {
 			$name .= 'index';
 		}
 
+		// ファイル名（ディレクトリ）からモジュールを検出
 		$module = self::parseModule($name);
-//		var_dump($module);
+
+		// コントローラを介さないレンダリング
 		if($this->defaultView($name)){
 			exit;
 		}
-		$module['module'] = trim($module['module'], '/');
 
+		// モジュールに該当するレンダリング
+		$module['module'] = trim($module['module'], '/');
 		$this->moduleView($module);
 
 		//htaccessで振り分け
@@ -58,33 +68,43 @@ class DispatchAPI {
 		exit ;
 	}
 
+	// モジュールを検出
 	static function parseModule($path){
-		$dirs = self::$MODULE_DIRS;
+		$dirs = self::$MODULE_DIRS; //モジュール－ディレクトリ対応リスト
 		$found = false;
-//		$path = trim($path, '/');
+
 		$mod = array();
-		preg_match("/^\/?(\w*)\/?/" , $path, $mod);
+		preg_match("/^\/?(\w*)\/?/" , $path, $mod); //パスから英数字のみを抽出
 		$mod = $mod[1];
+
+		// 抽出文字からモジュールリストの一致を検索
 		foreach($dirs as $m => $d){
-//		var_dump($d, $m, $path, $mod );
-//			if(strpos($path, $m) > -1){
 			if($mod == $m){
 				$found = true;
 				break;
 			}
 		}
+
+		// 見つからなければデフォルトテンプレート('page')
 		if(!$found){
 			$m = self::$DEFAULT_TEMPLATE;
 		}
 		$module = $m;
+
+		// パスからクエリを抽出（//で囲まれたモジュール名を取り払う）
 		$query = preg_replace("/^\/?{$m}\/?/" , '', $path);
 		return array('module' => $module, 'query' => $query);
 	}
 
 	function moduleView($module){
 		if(array_key_exists($module['module'], self::$MODULE_DIRS)){
+			// クエリを抽出
 			$module['query'] = empty($module['query']) ? 'index' : $module['query'];
+
+			// モジュールごとのView関数（殆どは'page'モジュール）
 			$func = $module['module'].'View';
+
+			// モジュール関数を実行（コントローラ・レンダリング）
 			$this->$func($module['query']);
 		}else{
 			$this->notfound();
@@ -126,29 +146,33 @@ class DispatchAPI {
 		exit ;
 	}
 
-
+	// ほとんどの出力を担当
 	function defaultView($name){
-		///name
+		// デフォルトファイルパスを構築
 		$dpath = SYSDIR. 'default'. $name;
 		$mt = preg_match('/\/$/', $name);
-//		var_dump($dpath, $mt);
+
 		if(file_exists($dpath. '/index.php')){
+			// index.phpを検出したら出力
 			if($mt === 0){
 				header('location: '. $name. '/');
 			}
 			chdir($dpath);
 			require_once ($dpath. '/index.php');
 		}else if (file_exists($dpath)){
+			// ディレクトリのみを検出
 			chdir(dirname($dpath));
+			// メディア（画像）を出力
 			if(preg_match('/\.+(gif|jpg|jpeg|png|webp)$/', $dpath, $match)){
 				header("Content-Type: image/". $match[1]);
 				echo file_get_contents(basename($dpath));
 			}else{
+				// それ以外のファイルを出力
 				require_once (basename($dpath));
 			}
 		}else{
+			// 該当なし（404）
 			return false;
-//			require_once (VIEW_PATH. 'notfound.php');
 		}
 		exit;
 	}
@@ -198,7 +222,7 @@ class DispatchAPI {
 			require_once (APP_DIR. $name. '/index.php');
 		}else if (file_exists(APP_DIR. $name. '/index.html')) {
 			$content = file_get_contents(APP_DIR. $name. '/index.html');
-			
+
 			$name = str_replace('/', '', $name);
 			if(file_exists(META_PATH. $name. '.php')){
 				$insContents = file_get_contents(META_PATH. $name. '.php');
@@ -224,6 +248,7 @@ class DispatchAPI {
 		exit;
 	}
 
+	// コントローラを介してビューをレンダリング
 	static function pageView($viewPageName ) {
 		$cpath = CONTROLLER_PATH . $viewPageName;
 		$vpath = VIEW_PATH . $viewPageName;
@@ -234,15 +259,18 @@ class DispatchAPI {
 			require_once (VIEW_PATH . $viewPageName . '.php');
 			require_once (VIEW_PATH . 'common/footer.php');
 		}else if(file_exists($vpath. '.php')){
+			// コントローラがなくてもビューのみ参照
 			require_once (VIEW_PATH . $viewPageName . '.php');
 			require_once (VIEW_PATH . 'common/header.php');
 			require_once (VIEW_PATH . $viewPageName . '.php');
 			require_once (VIEW_PATH . 'common/footer.php');
 		}else if(file_exists($cpath . '/index.php')){
+			// ファイル名省略時はindex.phpを参照
 			chdir($cpath);
 			require_once (CONTROLLER_PATH . $viewPageName . '/index.php');
 			return;
 		}else if(file_exists($vpath . '/index.php')){
+			// ディレクトリ・ファイル名省略時はindex.phpを参照
 			chdir($vpath);
 			require_once (VIEW_PATH . $viewPageName . '/index.php');
 			return;
